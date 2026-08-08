@@ -1,0 +1,74 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import PageHero from '../../components/PageHero.astro';
+import { getCollection } from 'astro:content';
+
+const guides = (await getCollection('guides')).filter((e) => !e.data.draft);
+const templates = (await getCollection('templates')).filter((e) => !e.data.draft);
+const frameworks = (await getCollection('frameworks')).filter((e) => !e.data.draft);
+
+const sections = [
+  {
+    id: 'guides',
+    title: 'Guides',
+    lede: 'Go deeper on the problems that matter.',
+    body: 'Practical, in-depth resources covering partnerships, communities, CRM, data and operations.',
+    items: guides,
+    cta: 'Explore Guides',
+    href: '/resources/guides',
+  },
+  {
+    id: 'templates',
+    title: 'Templates',
+    lede: 'Start with something you can use.',
+    body: 'Ready-to-use tools for research, relationship management and everyday operations.',
+    items: templates,
+    cta: 'Explore Templates',
+    href: '/resources/templates',
+  },
+  {
+    id: 'frameworks',
+    title: 'Frameworks',
+    lede: 'A clearer way to approach complex relationship challenges.',
+    body: 'Practical structures for approaching partnership, stakeholder and relationship management challenges.',
+    items: frameworks,
+    cta: 'Explore Frameworks',
+    href: '/resources/frameworks',
+  },
+];
+---
+
+<Layout
+  title="Resources"
+  description="Templates, frameworks and guides designed to help you organize information, strengthen relationships and improve your operations."
+>
+  <PageHero
+    eyebrow="Resources"
+    title="Practical resources for better relationship management."
+    lede="Templates, frameworks and guides designed to help you organize information, strengthen relationships and improve your operations."
+  />
+
+  <div class="divide-y divide-white/10">
+    {sections.map((section) => (
+      <section id={section.id} class="mx-auto max-w-content px-6 py-16 md:px-10 md:py-20">
+        <div class="grid gap-10 md:grid-cols-[1fr_1.4fr]">
+          <div>
+            <h2 class="text-2xl sm:text-3xl">{section.lede}</h2>
+            <p class="mt-4 max-w-sm text-white/70">{section.body}</p>
+            <a href={section.href} class="mt-6 inline-flex items-center gap-1.5 text-sm font-medium text-teal hover:text-white">
+              {section.cta}
+              <svg class="h-3.5 w-3.5" viewBox="0 0 14 14" fill="none" aria-hidden="true">
+                <path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+            </a>
+          </div>
+          <ul class="space-y-3">
+            {section.items.map((item) => (
+              <li class="rounded border border-white/10 px-5 py-4 text-sm text-white/80">{item.data.title}</li>
+            ))}
+          </ul>
+        </div>
+      </section>
+    ))}
+  </div>
+</Layout>

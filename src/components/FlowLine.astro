@@ -1,0 +1,45 @@
+---
+// A quiet structural signature: a single line connecting a few nodes, standing
+// in for "relationships" being brought into "flow." Used between sections
+// instead of a plain <hr> or a decorative gradient block.
+interface Props {
+  class?: string;
+  nodes?: number;
+}
+
+const { class: className = '', nodes = 4 } = Astro.props;
+
+const width = 1200;
+const height = 48;
+const pad = 60;
+const step = (width - pad * 2) / (nodes - 1);
+
+const points = Array.from({ length: nodes }, (_, i) => {
+  const x = pad + step * i;
+  const y = i % 2 === 0 ? height * 0.72 : height * 0.28;
+  return { x, y };
+});
+
+const path = points
+  .map((p, i) => {
+    if (i === 0) return `M ${p.x} ${p.y}`;
+    const prev = points[i - 1];
+    const midX = (prev.x + p.x) / 2;
+    return `C ${midX} ${prev.y}, ${midX} ${p.y}, ${p.x} ${p.y}`;
+  })
+  .join(' ');
+---
+
+<svg
+  class={`w-full h-auto text-teal-deep/60 ${className}`}
+  viewBox={`0 0 ${width} ${height}`}
+  fill="none"
+  preserveAspectRatio="none"
+  aria-hidden="true"
+  focusable="false"
+>
+  <path d={path} stroke="currentColor" stroke-width="1.5" vector-effect="non-scaling-stroke" />
+  {points.map((p) => (
+    <circle cx={p.x} cy={p.y} r="4" class="fill-teal" />
+  ))}
+</svg>

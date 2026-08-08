@@ -1,0 +1,40 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import PageHero from '../../components/PageHero.astro';
+import ServiceCard from '../../components/ServiceCard.astro';
+import { services } from '../../data/services';
+---
+
+<Layout
+  title="What We Do"
+  description="Relaflow helps organizations identify opportunities, strengthen partnerships, organize relationship data and improve the systems behind their growth."
+>
+  <PageHero
+    eyebrow="What We Do"
+    title="Build the infrastructure behind your relationships."
+    lede="Relaflow helps organizations identify opportunities, strengthen partnerships, organize relationship data and improve the systems behind their growth."
+  />
+
+  <section class="mx-auto max-w-content px-6 py-16 md:px-10 md:py-20">
+    <div class="grid gap-5 sm:grid-cols-2">
+      {services.map((service) => (
+        <ServiceCard service={service} prompt={service.tagline} />
+      ))}
+    </div>
+  </section>
+
+  <section class="border-t border-white/10">
+    <div class="mx-auto flex max-w-content flex-col items-start justify-between gap-6 px-6 py-16 md:flex-row md:items-center md:px-10 md:py-20">
+      <div>
+        <h2 class="text-2xl sm:text-3xl">Have a relationship or operations challenge?</h2>
+        <p class="mt-3 text-white/70">Tell us what you're trying to build.</p>
+      </div>
+      <a
+        href="/contact"
+        class="shrink-0 rounded bg-teal px-6 py-3 text-sm font-medium text-navy transition-colors hover:bg-teal-deep hover:text-white"
+      >
+        Work With Us
+      </a>
+    </div>
+  </section>
+</Layout>

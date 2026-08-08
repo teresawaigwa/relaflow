@@ -1,0 +1,38 @@
+---
+interface Item {
+  title: string;
+  description?: string;
+  href?: string;
+}
+interface Props {
+  items: Item[];
+}
+const { items } = Astro.props;
+---
+
+<ul class="divide-y divide-white/10 border-y border-white/10">
+  {items.map((item) => {
+    const Tag = item.href ? 'a' : 'div';
+    return (
+      <li>
+        <Tag
+          href={item.href}
+          class:list={[
+            'flex items-center justify-between gap-6 py-5',
+            item.href && 'group transition-colors hover:text-teal',
+          ]}
+        >
+          <span>
+            <span class="block text-base text-white group-hover:text-teal">{item.title}</span>
+            {item.description && <span class="mt-1 block text-sm text-white/60">{item.description}</span>}
+          </span>
+          {item.href && (
+            <svg class="h-4 w-4 shrink-0 text-white/40 transition-transform group-hover:translate-x-0.5 group-hover:text-teal" viewBox="0 0 14 14" fill="none" aria-hidden="true">
+              <path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+          )}
+        </Tag>
+      </li>
+    );
+  })}
+</ul>

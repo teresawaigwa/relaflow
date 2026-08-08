@@ -1,0 +1,93 @@
+---
+import { mainNav } from '../data/nav';
+---
+
+<header class="sticky top-0 z-50 border-b border-white/10 bg-navy/95 backdrop-blur">
+  <div class="mx-auto flex max-w-content items-center justify-between gap-6 px-6 py-4 md:px-10">
+    <a href="/" class="flex items-center gap-2 shrink-0" aria-label="Relaflow home">
+      <span class="font-display text-xl font-semibold tracking-tight">
+        <span class="text-white">RELA</span><span class="text-teal">FLOW</span>
+      </span>
+    </a>
+
+    <!-- Desktop navigation -->
+    <nav aria-label="Primary" class="hidden md:block">
+      <ul class="flex items-center gap-1">
+        {mainNav.map((item) => (
+          <li class="group relative">
+            <a
+              href={item.href}
+              class="flex items-center gap-1 rounded px-3 py-2 text-sm text-white/85 transition-colors hover:text-teal"
+            >
+              {item.label}
+              {item.children && (
+                <svg class="h-3 w-3 text-white/50 transition-colors group-hover:text-teal" viewBox="0 0 12 12" fill="none" aria-hidden="true">
+                  <path d="M3 4.5 6 7.5 9 4.5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+              )}
+            </a>
+
+            {item.children && (
+              <div class="invisible absolute left-0 top-full w-64 translate-y-1 rounded border border-white/10 bg-navy opacity-0 shadow-xl shadow-black/40 transition-all duration-150 group-hover:visible group-hover:translate-y-0 group-hover:opacity-100 group-focus-within:visible group-focus-within:translate-y-0 group-focus-within:opacity-100">
+                <ul class="py-2">
+                  {item.children.map((child) => (
+                    <li>
+                      <a href={child.href} class="block px-4 py-2.5 text-sm text-white/80 hover:bg-white/5 hover:text-teal">
+                        {child.label}
+                      </a>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            )}
+          </li>
+        ))}
+      </ul>
+    </nav>
+
+    <div class="hidden shrink-0 items-center gap-5 md:flex">
+      <a href="/#newsletter" class="text-sm text-white/80 hover:text-teal">Subscribe</a>
+      <a
+        href="/contact"
+        class="rounded bg-teal px-4 py-2 text-sm font-medium text-navy transition-colors hover:bg-teal-deep hover:text-white"
+      >
+        Work With Us
+      </a>
+    </div>
+
+    <!-- Mobile menu -->
+    <details class="relative md:hidden">
+      <summary
+        class="flex h-9 w-9 cursor-pointer list-none items-center justify-center rounded border border-white/15 text-white [&::-webkit-details-marker]:hidden"
+        aria-label="Open menu"
+      >
+        <svg class="h-4 w-4" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+          <path d="M2.5 5h15M2.5 10h15M2.5 15h15" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
+        </svg>
+      </summary>
+
+      <div class="fixed inset-x-0 top-[65px] z-40 max-h-[calc(100vh-65px)] overflow-y-auto border-t border-white/10 bg-navy px-6 py-6">
+        <ul class="space-y-1">
+          {mainNav.map((item) => (
+            <li>
+              <a href={item.href} class="block py-2 text-base font-medium text-white">{item.label}</a>
+              {item.children && (
+                <ul class="ml-3 space-y-1 border-l border-white/10 pl-4">
+                  {item.children.map((child) => (
+                    <li>
+                      <a href={child.href} class="block py-1.5 text-sm text-white/70 hover:text-teal">{child.label}</a>
+                    </li>
+                  ))}
+                </ul>
+              )}
+            </li>
+          ))}
+        </ul>
+        <div class="mt-6 flex flex-col gap-3 border-t border-white/10 pt-6">
+          <a href="/#newsletter" class="text-sm text-white/80 hover:text-teal">Subscribe</a>
+          <a href="/contact" class="rounded bg-teal px-4 py-2.5 text-center text-sm font-medium text-navy">Work With Us</a>
+        </div>
+      </div>
+    </details>
+  </div>
+</header>

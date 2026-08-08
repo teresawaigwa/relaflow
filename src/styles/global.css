@@ -1,0 +1,50 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-navy text-white font-body antialiased;
+  }
+
+  h1, h2, h3, h4 {
+    @apply font-display font-medium tracking-tight;
+  }
+
+  /* Visible keyboard focus everywhere — never suppressed. */
+  a:focus-visible,
+  button:focus-visible,
+  input:focus-visible,
+  textarea:focus-visible,
+  select:focus-visible {
+    outline: 2px solid #14B8C4;
+    outline-offset: 3px;
+    border-radius: 2px;
+  }
+
+  ::selection {
+    background-color: #14B8C4;
+    color: #0B1B2E;
+  }
+}
+
+@layer components {
+  .prose-body a {
+    @apply text-teal underline underline-offset-2 decoration-teal/40 hover:decoration-teal transition-colors;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  * {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+}

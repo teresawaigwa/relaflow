@@ -1,0 +1,90 @@
+---
+import Layout from '../layouts/Layout.astro';
+import FlowLine from '../components/FlowLine.astro';
+import ServiceCard from '../components/ServiceCard.astro';
+import Newsletter from '../components/Newsletter.astro';
+import { services } from '../data/services';
+---
+
+<Layout
+  title="Relaflow — Systems for Sustainable Growth"
+  description="We build the relationship infrastructure that helps organizations identify opportunities, nurture partnerships, manage their networks and sustain growth."
+>
+  <!-- Hero -->
+  <section class="mx-auto max-w-content px-6 pt-20 pb-16 md:px-10 md:pt-28 md:pb-24">
+    <div class="max-w-3xl">
+      <p class="font-display text-sm uppercase tracking-widest2 text-teal">Welcome to Relaflow</p>
+      <h1 class="mt-5 text-4xl leading-[1.1] sm:text-5xl md:text-6xl">It's good to have you here.</h1>
+      <p class="mt-7 max-w-2xl text-lg leading-relaxed text-white/75">
+        We build the relationship infrastructure that helps organizations identify opportunities, nurture
+        partnerships, manage their networks and sustain growth.
+      </p>
+      <p class="mt-4 max-w-2xl text-lg leading-relaxed text-white/75">
+        Whether you're building partnerships, growing a community, managing relationship data or looking for
+        better ways to understand your stakeholders, you're in the right place.
+      </p>
+    </div>
+    <FlowLine nodes={6} class="mt-16 h-8" />
+  </section>
+
+  <!-- What are you trying to improve? -->
+  <section class="mx-auto max-w-content px-6 pb-20 md:px-10 md:pb-28">
+    <h2 class="text-2xl sm:text-3xl">What are you trying to improve?</h2>
+    <div class="mt-8 grid gap-5 sm:grid-cols-2">
+      {services.map((service) => (
+        <ServiceCard service={service} prompt={service.homePrompt} />
+      ))}
+    </div>
+  </section>
+
+  <!-- Want to explore? -->
+  <section class="border-t border-white/10 bg-white/[0.02]">
+    <div class="mx-auto max-w-content px-6 py-20 md:px-10 md:py-24">
+      <h2 class="text-2xl sm:text-3xl">Want to explore?</h2>
+      <div class="mt-8 grid gap-5 sm:grid-cols-2">
+        <a href="/insights" class="group rounded border border-white/10 p-6 transition-colors hover:border-teal/50 sm:p-8">
+          <h3 class="text-xl">Explore our Insights</h3>
+          <p class="mt-3 text-sm leading-relaxed text-white/65">
+            Read our latest thinking on partnerships, communities, data, operations and sustainable growth.
+          </p>
+          <span class="mt-6 inline-flex items-center gap-1.5 text-sm font-medium text-teal">
+            Explore Insights
+            <svg class="h-3.5 w-3.5 transition-transform group-hover:translate-x-0.5" viewBox="0 0 14 14" fill="none" aria-hidden="true">
+              <path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+          </span>
+        </a>
+        <a href="/resources" class="group rounded border border-white/10 p-6 transition-colors hover:border-teal/50 sm:p-8">
+          <h3 class="text-xl">Explore our Resources</h3>
+          <p class="mt-3 text-sm leading-relaxed text-white/65">
+            Find practical templates, frameworks and guides you can use to improve the way you work.
+          </p>
+          <span class="mt-6 inline-flex items-center gap-1.5 text-sm font-medium text-teal">
+            Explore Resources
+            <svg class="h-3.5 w-3.5 transition-transform group-hover:translate-x-0.5" viewBox="0 0 14 14" fill="none" aria-hidden="true">
+              <path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+          </span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Newsletter -->
+  <section class="mx-auto max-w-content px-6 py-20 md:px-10 md:py-24">
+    <Newsletter />
+  </section>
+
+  <!-- Closing CTA -->
+  <section class="border-t border-white/10">
+    <div class="mx-auto flex max-w-content flex-col items-start justify-between gap-6 px-6 py-16 md:flex-row md:items-center md:px-10 md:py-20">
+      <h2 class="max-w-lg text-2xl sm:text-3xl">Ready to build better systems around your relationships?</h2>
+      <a
+        href="/contact"
+        class="shrink-0 rounded bg-teal px-6 py-3 text-sm font-medium text-navy transition-colors hover:bg-teal-deep hover:text-white"
+      >
+        Work With Us
+      </a>
+    </div>
+  </section>
+</Layout>

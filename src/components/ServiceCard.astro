@@ -1,0 +1,25 @@
+---
+import type { Service } from '../data/services';
+
+interface Props {
+  service: Service;
+  prompt?: string;
+}
+const { service, prompt } = Astro.props;
+---
+
+<a
+  href={`/what-we-do/${service.slug}`}
+  class="group flex flex-col justify-between rounded border border-white/10 bg-white/[0.03] p-6 transition-colors hover:border-teal/50 hover:bg-white/[0.05] sm:p-8"
+>
+  <div>
+    {prompt && <p class="text-lg text-white">{prompt}</p>}
+    <p class="mt-3 text-sm leading-relaxed text-white/65">{service.intro}</p>
+  </div>
+  <span class="mt-6 inline-flex items-center gap-1.5 text-sm font-medium text-teal">
+    {service.title}
+    <svg class="h-3.5 w-3.5 transition-transform group-hover:translate-x-0.5" viewBox="0 0 14 14" fill="none" aria-hidden="true">
+      <path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" />
+    </svg>
+  </span>
+</a>

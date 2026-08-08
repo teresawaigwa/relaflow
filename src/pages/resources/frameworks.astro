@@ -1,0 +1,24 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import PageHero from '../../components/PageHero.astro';
+import ResourceList from '../../components/ResourceList.astro';
+import { getCollection } from 'astro:content';
+
+const frameworks = (await getCollection('frameworks')).filter((e) => !e.data.draft);
+const items = frameworks.map((f) => ({ title: f.data.title, description: f.data.description }));
+---
+
+<Layout
+  title="Frameworks"
+  description="Practical structures for approaching partnership, stakeholder and relationship management challenges."
+>
+  <PageHero
+    eyebrow="Resources"
+    title="A clearer way to approach complex relationship challenges."
+    lede="Practical structures for approaching partnership, stakeholder and relationship management challenges."
+  />
+
+  <section class="mx-auto max-w-content px-6 py-16 md:px-10 md:py-20">
+    <ResourceList items={items} />
+  </section>
+</Layout>

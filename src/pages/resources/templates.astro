@@ -1,0 +1,24 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import PageHero from '../../components/PageHero.astro';
+import ResourceList from '../../components/ResourceList.astro';
+import { getCollection } from 'astro:content';
+
+const templates = (await getCollection('templates')).filter((e) => !e.data.draft);
+const items = templates.map((t) => ({ title: t.data.title, description: t.data.description }));
+---
+
+<Layout
+  title="Templates"
+  description="Ready-to-use tools for research, relationship management and everyday operations."
+>
+  <PageHero
+    eyebrow="Resources"
+    title="Start with something you can use."
+    lede="Ready-to-use tools for research, relationship management and everyday operations."
+  />
+
+  <section class="mx-auto max-w-content px-6 py-16 md:px-10 md:py-20">
+    <ResourceList items={items} />
+  </section>
+</Layout>
