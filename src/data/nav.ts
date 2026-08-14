@@ -3,6 +3,10 @@ export type NavItem = { label: string; href: string; children?: NavChild[] };
 
 export const mainNav: NavItem[] = [
   {
+    label: 'Home',
+    href: '/',
+  },
+  {
     label: 'About',
     href: '/about',
     children: [
@@ -52,8 +56,7 @@ export const footerExplore: NavChild[] = [
 ];
 
 export const socialLinks: NavChild[] = [
-  { label: 'LinkedIn', href: 'https://linkedin.com' },
-  { label: 'Instagram', href: 'https://instagram.com' },
-  { label: 'X', href: 'https://x.com' },
-  { label: 'YouTube', href: 'https://youtube.com' },
+  { label: 'LinkedIn', href: 'https://www.linkedin.com/company/relaflow/' },
+  { label: 'Facebook', href: 'https://www.facebook.com/relaflow' },
+  { label: 'YouTube', href: 'https://www.youtube.com/@Relaflowsystems' },
 ];

@@ -16,7 +16,7 @@ export const services: Service[] = [
     title: 'Partner & Sponsor Development',
     tagline: 'Find relevant opportunities. Build stronger partnerships.',
     intro:
-      "We help you research potential partners and sponsors, build structured pipelines and create better systems for managing relationships from first contact through ongoing engagement.",
+      'We help you research potential partners and sponsors, build a structured pipeline and put real systems behind managing relationships, from first contact through to long-term, ongoing engagement.',
     bullets: [
       'Partner research',
       'Sponsor research',
@@ -28,6 +28,7 @@ export const services: Service[] = [
       'Relationship retention',
     ],
   },
+
   {
     slug: 'community-growth',
     navLabel: 'Community Growth',
@@ -35,7 +36,7 @@ export const services: Service[] = [
     title: 'Community Growth',
     tagline: 'Grow your community with better systems behind it.',
     intro:
-      'We help you understand your community, organize member and stakeholder information, strengthen engagement and create systems that support long-term retention.',
+      'We help you understand your community, organize member and stakeholder information, strengthen engagement where it matters most and build systems that support growth without losing what makes the community work in the first place.',
     bullets: [
       'Community research',
       'Stakeholder mapping',
@@ -46,6 +47,7 @@ export const services: Service[] = [
       'Retention systems',
     ],
   },
+
   {
     slug: 'relationship-operations',
     navLabel: 'Relationship Operations',
@@ -53,7 +55,7 @@ export const services: Service[] = [
     title: 'Relationship Operations',
     tagline: 'Bring your relationship management into one clearer system.',
     intro:
-      'We help you organize CRM data, improve workflows and introduce practical automation that makes relationship management easier to manage and maintain.',
+      'We help you organize your CRM data, improve workflows and introduce practical automation, so relationship management becomes easier to run day to day, not something that only works when one person remembers how.',
     bullets: [
       'CRM setup and organization',
       'CRM data management',
@@ -65,6 +67,7 @@ export const services: Service[] = [
       'Reporting',
     ],
   },
+
   {
     slug: 'market-stakeholder-intelligence',
     navLabel: 'Market & Stakeholder Intelligence',
@@ -72,7 +75,7 @@ export const services: Service[] = [
     title: 'Market & Stakeholder Intelligence',
     tagline: 'Know where the opportunities are.',
     intro:
-      'We research markets, stakeholders and potential opportunities to help you understand your environment and make better-informed decisions.',
+      'We research markets, stakeholders and potential opportunities so you understand the environment you’re operating in and can make decisions based on evidence, not guesswork.',
     bullets: [
       'Market research',
       'Stakeholder research',

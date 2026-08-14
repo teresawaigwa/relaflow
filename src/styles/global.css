@@ -12,7 +12,20 @@
   }
 
   h1, h2, h3, h4 {
-    @apply font-display font-medium tracking-tight;
+    @apply font-display font-normal tracking-tight;
+  }
+
+  /* Article typography */
+  .prose-body h2 {
+    @apply mt-12 mb-4 font-display text-2xl font-normal tracking-tight text-white;
+  }
+
+  .prose-body h3 {
+    @apply mt-10 mb-3 font-display text-xl font-normal tracking-tight text-white;
+  }
+
+  .prose-body p {
+    @apply mb-6;
   }
 
   /* Visible keyboard focus everywhere — never suppressed. */
@@ -42,6 +55,7 @@
   html {
     scroll-behavior: auto;
   }
+
   * {
     animation-duration: 0.001ms !important;
     animation-iteration-count: 1 !important;

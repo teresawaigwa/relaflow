@@ -3,7 +3,18 @@ import Layout from '../../layouts/Layout.astro';
 import PageHero from '../../components/PageHero.astro';
 import { getCollection } from 'astro:content';
 
-const articles = (await getCollection('articles')).filter((e) => !e.data.draft);
+const allArticles = await getCollection('articles');
+
+const articleOrder = [
+  'why-good-relationships-go-cold',
+  'relationship-after-the-meeting',
+  'relationship-system-problem',
+  'retention-advantage',
+];
+
+const articles = articleOrder
+  .map((slug) => allArticles.find((article) => article.slug === slug))
+  .filter((article) => article && !article.data.draft);
 ---
 
 <Layout
@@ -20,10 +31,22 @@ const articles = (await getCollection('articles')).filter((e) => !e.data.draft);
             <h2 class="text-lg text-white group-hover:text-teal sm:text-xl">{article.data.title}</h2>
             <p class="mt-2 max-w-xl text-sm text-white/65">{article.data.description}</p>
           </div>
+
           <span class="hidden shrink-0 items-center gap-1.5 text-sm font-medium text-teal sm:inline-flex">
             Read Article
-            <svg class="h-3.5 w-3.5 transition-transform group-hover:translate-x-0.5" viewBox="0 0 14 14" fill="none" aria-hidden="true">
-              <path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" />
+            <svg
+              class="h-3.5 w-3.5 transition-transform group-hover:translate-x-0.5"
+              viewBox="0 0 14 14"
+              fill="none"
+              aria-hidden="true"
+            >
+              <path
+                d="M2 7h10M8 3l4 4-4 4"
+                stroke="currentColor"
+                stroke-width="1.4"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
             </svg>
           </span>
         </a>

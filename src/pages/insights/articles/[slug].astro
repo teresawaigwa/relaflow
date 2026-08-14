@@ -19,11 +19,14 @@ const { Content } = await article.render();
   <PageHero eyebrow="Insights · Article" title={article.data.title} />
 
   <section class="mx-auto max-w-content px-6 py-16 md:px-10 md:py-20">
-    <div class="prose-body max-w-2xl text-lg leading-relaxed text-white/80">
+    <article class="prose-body max-w-2xl text-lg leading-relaxed text-white/80">
       <Content />
-    </div>
+    </article>
 
-    <a href="/insights/articles" class="mt-12 inline-flex items-center gap-1.5 text-sm font-medium text-teal hover:text-white">
+    <a
+      href="/insights/articles"
+      class="mt-12 inline-flex items-center gap-1.5 text-sm font-medium text-teal hover:text-white"
+    >
       ← Back to Articles
     </a>
   </section>
