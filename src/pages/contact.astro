@@ -1,3 +1,4 @@
+```astro
 ---
 import Layout from '../layouts/Layout.astro';
 import PageHero from '../components/PageHero.astro';
@@ -9,6 +10,8 @@ const helpOptions = [
   'Market & Stakeholder Intelligence',
   'Other',
 ];
+
+const submitted = Astro.url.searchParams.get('sent') === '1';
 ---
 
 <Layout
@@ -20,6 +23,14 @@ const helpOptions = [
     title="Let's talk."
     lede="Tell us what you are working on, where you are facing a challenge, or what you are trying to build."
   />
+
+  {submitted && (
+    <div class="mx-auto max-w-content px-6 pt-8 md:px-10">
+      <div class="rounded border border-teal/30 bg-teal/10 px-5 py-4 text-sm text-white">
+        Thank you. Your enquiry has been received. We’ll be in touch soon.
+      </div>
+    </div>
+  )}
 
   <section class="mx-auto max-w-content px-6 py-16 md:px-10 md:py-20">
     <div class="grid gap-12 md:grid-cols-[1.3fr_1fr]">
@@ -124,3 +135,4 @@ const helpOptions = [
     </div>
   </section>
 </Layout>
+```
