@@ -12,38 +12,18 @@ const { class: className = '' } = Astro.props;
         The Business of Relationships Brief
       </p>
 
-      <h2 class="mt-4 text-2xl sm:text-3xl">
-        Stay connected with the business of relationships.
-      </h2>
-
       <p class="mt-4 text-white/70">
         Get new insights, research, conversations, training opportunities and practical resources from Relaflow.
       </p>
 
-      <!--
-        Wire this form up to your email provider (e.g. Mailchimp, ConvertKit, Buttondown)
-        by setting the form action / endpoint below. No provider was specified, so this
-        currently only validates the field client-side and does not send anywhere yet.
-      -->
-      <form class="mx-auto mt-8 flex max-w-md flex-col gap-3 sm:flex-row" method="POST" action="#">
-        <label for="newsletter-email" class="sr-only">Work email</label>
-
-        <input
-          id="newsletter-email"
-          name="email"
-          type="email"
-          required
-          placeholder="Work email"
-          class="w-full rounded border border-white/15 bg-navy px-4 py-3 text-sm text-white placeholder:text-grey focus:border-teal"
-        />
-
-        <button
-          type="submit"
-          class="shrink-0 rounded bg-teal px-6 py-3 text-sm font-medium text-navy transition-colors hover:bg-teal-deep hover:text-white"
-        >
-          Subscribe
-        </button>
-      </form>
+      <a
+        href="https://relaflow.substack.com"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="mx-auto mt-8 inline-block rounded bg-teal px-6 py-3 text-sm font-medium text-navy transition-colors hover:bg-teal-deep hover:text-white"
+      >
+        Subscribe
+      </a>
     </div>
   </div>
 </section>

@@ -4,11 +4,11 @@ import PageHero from '../components/PageHero.astro';
 
 const helpOptions = [
   'Client Relationships',
-  'Partnerships & Sponsorships',
-  'Events & Communities',
+  'Partnerships and Sponsorships',
+  'Events and Communities',
   'Relationship Operations',
-  'Research & Data',
-  'Training & Workshops',
+  'Research and Data',
+  'Training and Workshops',
   'Other',
 ];
 
@@ -17,18 +17,18 @@ const submitted = Astro.url.searchParams.get('sent') === '1';
 
 <Layout
   title="Contact Relaflow | Let's Talk"
-  description="Tell Relaflow what you're working on, where you're facing a challenge, or what you're trying to build."
+  description="Tell Relaflow what you are working on, where you are facing a challenge, or what you are trying to build."
 >
   <PageHero
     eyebrow="Contact"
     title="Let's talk."
-    lede="Tell us what you're working on, where you're facing a challenge, or what you're trying to build."
+    lede="Tell us what you are working on, where you are facing a challenge, or what you are trying to build."
   />
 
   {submitted && (
     <div class="mx-auto max-w-content px-6 pt-8 md:px-10">
       <div class="rounded border border-teal/30 bg-teal/10 px-5 py-4 text-sm text-white">
-        Thank you. Your enquiry has been received. We’ll be in touch soon.
+        Thank you. Your enquiry has been received. We will be in touch soon.
       </div>
     </div>
   )}
@@ -102,7 +102,7 @@ const submitted = Astro.url.searchParams.get('sent') === '1';
 
         <div>
           <label for="message" class="block text-sm text-white/70">
-            Tell us a little about what you're working on.
+            Tell us a little about what you are working on.
           </label>
 
           <textarea
@@ -139,7 +139,7 @@ const submitted = Astro.url.searchParams.get('sent') === '1';
         </p>
 
         <p class="mt-4 text-sm leading-relaxed text-white/70">
-          Whether you are exploring an opportunity, improving an existing process, developing your team's capabilities or looking for deeper project support, tell us what you're working on.
+          Whether you are exploring an opportunity, improving an existing process, developing your team's capabilities or looking for deeper project support, tell us what you are working on.
         </p>
 
         <a
