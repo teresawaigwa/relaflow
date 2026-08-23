@@ -1,6 +1,8 @@
 ---
 title: "The Retention Advantage: Why Your Next Opportunity May Already Be in Your Network"
 description: "The organizations that grow sustainably aren't always the ones with the biggest pipeline. They're the ones that know how to recognize and develop the opportunities already around them."
+category: "partnerships-sponsorships"
+draft: false
 ---
 
 When organizations think about growth, the first instinct is usually to look outward.
@@ -277,5 +279,3 @@ That is where relationship infrastructure becomes valuable.
 Growth becomes less about constantly starting new relationships and more about knowing how to develop the ones you already have.
 
 And that starts with knowing what information you actually need to track about each relationship.
-
-[Because without the right information, even a strong network becomes difficult to manage.](/insights/articles/what-to-track-in-a-partnership-crm)

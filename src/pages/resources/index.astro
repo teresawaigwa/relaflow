@@ -1,99 +1,244 @@
 ---
 import Layout from '../../layouts/Layout.astro';
 import PageHero from '../../components/PageHero.astro';
-import { getCollection } from 'astro:content';
-
-const guides = (await getCollection('guides')).filter((e) => !e.data.draft);
-const templates = (await getCollection('templates')).filter((e) => !e.data.draft);
-const frameworks = (await getCollection('frameworks')).filter((e) => !e.data.draft);
-
-const sections = [
-  {
-    id: 'guides',
-    title: 'Guides',
-    lede: 'Go deeper on the problems that matter.',
-    body: 'Practical, in-depth resources covering partnerships, communities, CRM, data and operations.',
-    items: guides,
-    cta: 'Explore Guides',
-    href: '/resources/guides',
-  },
-  {
-    id: 'templates',
-    title: 'Templates',
-    lede: 'Start with something you can use.',
-    body: 'Ready-to-use tools for research, relationship management and everyday operations.',
-    items: templates,
-    cta: 'Explore Templates',
-    href: '/resources/templates',
-  },
-  {
-    id: 'frameworks',
-    title: 'Frameworks',
-    lede: 'A clearer way to approach complex relationship challenges.',
-    body: 'Practical structures for approaching partnership, stakeholder and relationship management challenges.',
-    items: frameworks,
-    cta: 'Explore Frameworks',
-    href: '/resources/frameworks',
-  },
-];
 ---
 
 <Layout
-  title="Resources | Guides, Templates and Frameworks from Relaflow"
-  description="Practical guides, templates and frameworks to help you organize relationship data, strengthen partnerships and improve your operations."
+  title="Resources | Relaflow"
+  description="Practical tools for the business of relationships, including guides, templates, frameworks and training."
 >
   <PageHero
     eyebrow="Resources"
-    title="Practical resources for better relationship management."
-    lede="Templates, frameworks and guides designed to help you organize information, strengthen relationships and improve the way you operate. Everything here is meant to be used, not just read."
+    title="Practical tools for the business of relationships."
+    lede="Explore free guides, templates, frameworks and training designed to help teams understand relationship-related challenges and improve how the work gets done."
   />
 
-  <div class="divide-y divide-white/10">
-    {sections.map((section) => (
-      <section
-        id={section.id}
-        class="mx-auto max-w-content px-6 py-16 md:px-10 md:py-20"
-      >
-        <div class="grid gap-10 md:grid-cols-[1fr_1.4fr]">
-          <div>
-            <h2 class="text-2xl sm:text-3xl">{section.lede}</h2>
+  <!-- Guides -->
+  <section class="mx-auto max-w-content px-6 py-16 md:px-10 md:py-20">
+    <div class="grid gap-10 md:grid-cols-[1fr_1.4fr]">
+      <div>
+        <h2 class="text-2xl sm:text-3xl">
+          Guides
+        </h2>
 
-            <p class="mt-4 max-w-sm text-white/70">
-              {section.body}
-            </p>
+        <p class="mt-4 max-w-sm text-white/70">
+          Practical resources that explore specific questions around relationships, research, partnerships, communities and relationship management.
+        </p>
 
-            <a
-              href={section.href}
-              class="mt-6 inline-flex items-center gap-1.5 text-sm font-medium text-teal hover:text-white"
-            >
-              {section.cta}
+        <a
+          href="/resources/guides"
+          class="mt-6 inline-flex items-center gap-1.5 text-sm font-medium text-teal hover:text-white"
+        >
+          Explore Guides →
+        </a>
+      </div>
+    </div>
+  </section>
 
-              <svg
-                class="h-3.5 w-3.5"
-                viewBox="0 0 14 14"
-                fill="none"
-                aria-hidden="true"
-              >
-                <path
-                  d="M2 7h10M8 3l4 4-4 4"
-                  stroke="currentColor"
-                  stroke-width="1.4"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                />
-              </svg>
-            </a>
-          </div>
+  <!-- Templates -->
+  <section class="border-t border-white/10">
+    <div class="mx-auto max-w-content px-6 py-16 md:px-10 md:py-20">
+      <div class="grid gap-10 md:grid-cols-[1fr_1.4fr]">
+        <div>
+          <h2 class="text-2xl sm:text-3xl">
+            Templates
+          </h2>
 
-          <ul class="space-y-3">
-            {section.items.map((item) => (
-              <li class="rounded border border-white/10 px-5 py-4 text-sm text-white/80">
-                {item.data.title}
-              </li>
-            ))}
-          </ul>
+          <p class="mt-4 max-w-sm text-white/70">
+            Ready-to-use tools for organizing information, planning relationship-related work and creating more consistent processes.
+          </p>
+
+          <a
+            href="/resources/templates"
+            class="mt-6 inline-flex items-center gap-1.5 text-sm font-medium text-teal hover:text-white"
+          >
+            Explore Templates →
+          </a>
         </div>
-      </section>
-    ))}
-  </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Frameworks -->
+  <section class="border-t border-white/10">
+    <div class="mx-auto max-w-content px-6 py-16 md:px-10 md:py-20">
+      <div class="grid gap-10 md:grid-cols-[1fr_1.4fr]">
+        <div>
+          <h2 class="text-2xl sm:text-3xl">
+            Frameworks
+          </h2>
+
+          <p class="mt-4 max-w-sm text-white/70">
+            Structured approaches for examining recurring relationship challenges, identifying opportunities and making better decisions.
+          </p>
+
+          <a
+            href="/resources/frameworks"
+            class="mt-6 inline-flex items-center gap-1.5 text-sm font-medium text-teal hover:text-white"
+          >
+            Explore Frameworks →
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Training -->
+  <section class="border-t border-white/10 bg-white/[0.02]">
+    <div class="mx-auto max-w-content px-6 py-16 md:px-10 md:py-20">
+      <h2 class="text-2xl sm:text-3xl">
+        Training
+      </h2>
+
+      <p class="mt-4 max-w-2xl text-white/70">
+        Learn how to think about and manage organizational relationships more effectively.
+      </p>
+
+      <div class="mt-8 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+
+        <div class="rounded border border-white/10 p-6">
+          <h3 class="text-lg">
+            Relationship Management
+          </h3>
+
+          <p class="mt-3 text-sm leading-relaxed text-white/65">
+            Understanding relationship lifecycles, retention, follow-up and long-term relationship development.
+          </p>
+        </div>
+
+        <div class="rounded border border-white/10 p-6">
+          <h3 class="text-lg">
+            Partnerships & Sponsorships
+          </h3>
+
+          <p class="mt-3 text-sm leading-relaxed text-white/65">
+            Researching opportunities, building pipelines, developing relationships and managing partnership activity.
+          </p>
+        </div>
+
+        <div class="rounded border border-white/10 p-6">
+          <h3 class="text-lg">
+            Events & Communities
+          </h3>
+
+          <p class="mt-3 text-sm leading-relaxed text-white/65">
+            Understanding audiences, improving engagement and building stronger post-event relationships.
+          </p>
+        </div>
+
+        <div class="rounded border border-white/10 p-6">
+          <h3 class="text-lg">
+            Relationship Operations
+          </h3>
+
+          <p class="mt-3 text-sm leading-relaxed text-white/65">
+            Improving relationship data, CRM practices, workflows, processes and reporting.
+          </p>
+        </div>
+
+        <div class="rounded border border-white/10 p-6">
+          <h3 class="text-lg">
+            Research & Stakeholder Intelligence
+          </h3>
+
+          <p class="mt-3 text-sm leading-relaxed text-white/65">
+            Using research and information to understand markets, stakeholders, networks and opportunities.
+          </p>
+        </div>
+
+      </div>
+
+      <a
+        href="/contact"
+        class="mt-8 inline-flex items-center gap-1.5 text-sm font-medium text-teal hover:text-white"
+      >
+        Explore Training →
+      </a>
+    </div>
+  </section>
+
+  <!-- Relaflow Playbooks -->
+  <section class="border-t border-white/10">
+    <div class="mx-auto max-w-content px-6 py-16 md:px-10 md:py-20">
+
+      <h2 class="text-2xl sm:text-3xl">
+        The Relaflow Playbooks
+      </h2>
+
+      <p class="mt-4 max-w-2xl text-white/70">
+        Practical frameworks for recurring relationship challenges.
+      </p>
+
+      <div class="mt-8 grid gap-5 sm:grid-cols-2">
+
+        <div class="rounded border border-white/10 p-6 sm:p-8">
+          <h3 class="text-xl">
+            The Relationship Pipeline Framework
+          </h3>
+
+          <p class="mt-3 text-sm leading-relaxed text-white/65">
+            How to identify, organize and manage potential clients, partners and sponsors.
+          </p>
+        </div>
+
+        <div class="rounded border border-white/10 p-6 sm:p-8">
+          <h3 class="text-xl">
+            The Follow-Up Framework
+          </h3>
+
+          <p class="mt-3 text-sm leading-relaxed text-white/65">
+            How to create consistent follow-up practices that keep important relationships moving.
+          </p>
+        </div>
+
+        <div class="rounded border border-white/10 p-6 sm:p-8">
+          <h3 class="text-xl">
+            The Relationship Data Framework
+          </h3>
+
+          <p class="mt-3 text-sm leading-relaxed text-white/65">
+            How to organize the information that helps teams understand and manage relationships.
+          </p>
+        </div>
+
+        <div class="rounded border border-white/10 p-6 sm:p-8">
+          <h3 class="text-xl">
+            The Opportunity Mapping Framework
+          </h3>
+
+          <p class="mt-3 text-sm leading-relaxed text-white/65">
+            How to identify connections, networks and opportunities that may otherwise be overlooked.
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Get the Resources -->
+  <section class="border-t border-white/10 bg-white/[0.02]">
+    <div class="mx-auto max-w-content px-6 py-16 md:px-10 md:py-20">
+
+      <h2 class="text-2xl sm:text-3xl">
+        Get the Resources
+      </h2>
+
+      <p class="mt-4 max-w-2xl text-white/70">
+        Selected Relaflow resources are available free through email subscription.
+      </p>
+
+      <p class="mt-3 max-w-2xl text-white/70">
+        Subscribe to access new guides, templates, frameworks, playbooks and training opportunities.
+      </p>
+
+      <a
+        href="/#newsletter"
+        class="mt-6 inline-flex items-center gap-1.5 text-sm font-medium text-teal hover:text-white"
+      >
+        Get Resources →
+      </a>
+
+    </div>
+  </section>
 </Layout>

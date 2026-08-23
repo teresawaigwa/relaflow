@@ -1,6 +1,8 @@
 ---
 title: "Your Organization Doesn't Have a People Problem. It Has a Relationship System Problem."
 description: "When relationships depend on individual memory, the organization becomes fragile. Here's how to build systems that make relationships visible, manageable and sustainable."
+category: "relationship-operations"
+draft: false
 ---
 
 Your team is busy.
@@ -282,4 +284,4 @@ It may need a better way to make the work they are already doing visible, shared
 
 And once the system is in place, the next challenge is knowing which relationships deserve attention first. Not every potential partner, sponsor or stakeholder is equally valuable, and treating them all the same creates its own problems.
 
-[That is where a more structured approach to partner qualification becomes useful.](/resources/frameworks/partner-qualification-framework)
+That is where a more structured approach to partner qualification becomes useful.

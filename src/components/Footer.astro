@@ -13,27 +13,28 @@ import FlowLine from './FlowLine.astro';
       <span class="font-display text-lg font-semibold">
         <span class="text-white">RELA</span><span class="text-teal">FLOW</span>
       </span>
-      <p class="mt-3 text-sm text-grey">Systems for Sustainable Growth</p>
+
+      <p class="mt-3 text-sm text-grey">
+        The business of relationships.
+      </p>
+
       <p class="mt-4 max-w-xs text-sm text-white/60">
-        Relaflow builds data and operations infrastructure for relationship-driven organizations.
+        Relaflow explores how organizations find, build, manage and retain the relationships that matter to their work.
       </p>
     </div>
 
     <div>
-      <h3 class="font-display text-sm uppercase tracking-widest2 text-white/50">Explore</h3>
+      <h3 class="font-display text-sm uppercase tracking-widest2 text-white/50">
+        Explore
+      </h3>
+
       <ul class="mt-4 space-y-2.5">
         {footerExplore.map((item) => (
-          <li><a href={item.href} class="text-sm text-white/75 hover:text-teal">{item.label}</a></li>
-        ))}
-      </ul>
-    </div>
-
-    <div>
-      <h3 class="font-display text-sm uppercase tracking-widest2 text-white/50">Connect</h3>
-      <ul class="mt-4 space-y-2.5">
-        {socialLinks.map((item) => (
           <li>
-            <a href={item.href} target="_blank" rel="noreferrer noopener" class="text-sm text-white/75 hover:text-teal">
+            <a
+              href={item.href}
+              class="text-sm text-white/75 hover:text-teal"
+            >
               {item.label}
             </a>
           </li>
@@ -42,12 +43,50 @@ import FlowLine from './FlowLine.astro';
     </div>
 
     <div>
-      <h3 class="font-display text-sm uppercase tracking-widest2 text-white/50">Stay Connected</h3>
-      <p class="mt-4 text-sm text-white/75">The Relationship Infrastructure Brief</p>
-      <a href="/#newsletter" class="mt-2 inline-block text-sm text-teal hover:text-white">→ Subscribe</a>
+      <h3 class="font-display text-sm uppercase tracking-widest2 text-white/50">
+        Connect
+      </h3>
 
-      <h3 class="mt-8 font-display text-sm uppercase tracking-widest2 text-white/50">Contact</h3>
-      <a href="mailto:hello@relaflow.com" class="mt-2 inline-block text-sm text-white/75 hover:text-teal">
+      <ul class="mt-4 space-y-2.5">
+        {socialLinks.map((item) => (
+          <li>
+            <a
+              href={item.href}
+              target="_blank"
+              rel="noreferrer noopener"
+              class="text-sm text-white/75 hover:text-teal"
+            >
+              {item.label}
+            </a>
+          </li>
+        ))}
+      </ul>
+    </div>
+
+    <div>
+      <h3 class="font-display text-sm uppercase tracking-widest2 text-white/50">
+        Stay Connected
+      </h3>
+
+      <p class="mt-4 text-sm text-white/75">
+        The Business of Relationships Brief
+      </p>
+
+      <a
+        href="/#newsletter"
+        class="mt-2 inline-block text-sm text-teal hover:text-white"
+      >
+        → Subscribe
+      </a>
+
+      <h3 class="mt-8 font-display text-sm uppercase tracking-widest2 text-white/50">
+        Contact
+      </h3>
+
+      <a
+        href="mailto:hello@relaflow.com"
+        class="mt-2 inline-block text-sm text-white/75 hover:text-teal"
+      >
         hello@relaflow.com
       </a>
     </div>
@@ -56,9 +95,15 @@ import FlowLine from './FlowLine.astro';
   <div class="border-t border-white/10">
     <div class="mx-auto flex max-w-content flex-col gap-4 px-6 py-6 text-xs text-white/50 sm:flex-row sm:items-center sm:justify-between md:px-10">
       <p>&copy; {new Date().getFullYear()} Relaflow. All rights reserved.</p>
+
       <div class="flex gap-5">
-        <a href="/legal/privacy-policy" class="hover:text-teal">Privacy Policy</a>
-        <a href="/legal/terms" class="hover:text-teal">Terms</a>
+        <a href="/legal/privacy-policy" class="hover:text-teal">
+          Privacy Policy
+        </a>
+
+        <a href="/legal/terms" class="hover:text-teal">
+          Terms
+        </a>
       </div>
     </div>
   </div>

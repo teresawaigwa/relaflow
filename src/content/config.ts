@@ -1,18 +1,23 @@
 import { defineCollection, z } from 'astro:content';
 
-// Articles carry a short teaser (used on listing pages) and a body (the article itself).
-const articles = defineCollection({
+const expertiseAreas = [
+  'client-relationships',
+  'partnerships-sponsorships',
+  'events-communities',
+  'relationship-operations',
+  'research-data',
+] as const;
+
+const insights = defineCollection({
   type: 'content',
   schema: z.object({
     title: z.string(),
     description: z.string(),
+    category: z.enum(expertiseAreas),
     draft: z.boolean().default(false),
   }),
 });
 
-// Guides, Templates and Frameworks are lightweight — a title is all the brand
-// has supplied so far. Add `description`/`href` per entry later as copy exists;
-// nothing in the templates below needs to change.
 const resourceItem = z.object({
   title: z.string(),
   description: z.string().optional(),
@@ -20,12 +25,21 @@ const resourceItem = z.object({
   draft: z.boolean().default(false),
 });
 
-const guides = defineCollection({ type: 'content', schema: resourceItem });
-const templates = defineCollection({ type: 'content', schema: resourceItem });
-const frameworks = defineCollection({ type: 'content', schema: resourceItem });
+const guides = defineCollection({
+  type: 'content',
+  schema: resourceItem,
+});
 
-// Empty until there's a real event or conversation to list — the Insights page
-// hides this section entirely while the collection is empty.
+const templates = defineCollection({
+  type: 'content',
+  schema: resourceItem,
+});
+
+const frameworks = defineCollection({
+  type: 'content',
+  schema: resourceItem,
+});
+
 const events = defineCollection({
   type: 'content',
   schema: z.object({
@@ -36,4 +50,10 @@ const events = defineCollection({
   }),
 });
 
-export const collections = { articles, guides, templates, frameworks, events };
+export const collections = {
+  insights,
+  guides,
+  templates,
+  frameworks,
+  events,
+};

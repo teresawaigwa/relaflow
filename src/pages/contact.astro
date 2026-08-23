@@ -3,10 +3,12 @@ import Layout from '../layouts/Layout.astro';
 import PageHero from '../components/PageHero.astro';
 
 const helpOptions = [
-  'Partner & Sponsor Development',
-  'Community Growth',
+  'Client Relationships',
+  'Partnerships & Sponsorships',
+  'Events & Communities',
   'Relationship Operations',
-  'Market & Stakeholder Intelligence',
+  'Research & Data',
+  'Training & Workshops',
   'Other',
 ];
 
@@ -14,13 +16,13 @@ const submitted = Astro.url.searchParams.get('sent') === '1';
 ---
 
 <Layout
-  title="Contact Relaflow | Talk to Us About Your Relationship Infrastructure"
-  description="Tell Relaflow what you are working on, whether it is partnerships, community growth, CRM operations or stakeholder intelligence, and we will get back to you."
+  title="Contact Relaflow | Let's Talk"
+  description="Tell Relaflow what you're working on, where you're facing a challenge, or what you're trying to build."
 >
   <PageHero
     eyebrow="Contact"
     title="Let's talk."
-    lede="Tell us what you are working on, where you are facing a challenge, or what you are trying to build."
+    lede="Tell us what you're working on, where you're facing a challenge, or what you're trying to build."
   />
 
   {submitted && (
@@ -31,10 +33,14 @@ const submitted = Astro.url.searchParams.get('sent') === '1';
     </div>
   )}
 
+  <!-- Contact Form -->
   <section class="mx-auto max-w-content px-6 py-16 md:px-10 md:py-20">
     <div class="grid gap-12 md:grid-cols-[1.3fr_1fr]">
+
       <form class="space-y-5" method="POST" action="/api/contact">
+
         <div class="grid gap-5 sm:grid-cols-2">
+
           <div>
             <label for="name" class="block text-sm text-white/70">
               Name
@@ -62,6 +68,7 @@ const submitted = Astro.url.searchParams.get('sent') === '1';
               class="mt-2 w-full rounded border border-white/15 bg-white/[0.03] px-4 py-3 text-sm text-white focus:border-teal"
             />
           </div>
+
         </div>
 
         <div>
@@ -117,20 +124,48 @@ const submitted = Astro.url.searchParams.get('sent') === '1';
         <p class="text-xs text-white/45">
           Your information is used only to respond to your enquiry.
         </p>
+
       </form>
 
+      <!-- Work With Relaflow -->
       <div class="border-t border-white/10 pt-10 md:border-t-0 md:border-l md:pl-12 md:pt-0">
-        <h2 class="font-display text-sm uppercase tracking-widest2 text-white/50">
-          Prefer email?
+
+        <h2 class="text-2xl sm:text-3xl">
+          Work With Relaflow
         </h2>
+
+        <p class="mt-5 text-sm leading-relaxed text-white/70">
+          We work with organizations looking for insight, training, research or practical support around relationship-related challenges.
+        </p>
+
+        <p class="mt-4 text-sm leading-relaxed text-white/70">
+          Whether you are exploring an opportunity, improving an existing process, developing your team's capabilities or looking for deeper project support, tell us what you're working on.
+        </p>
 
         <a
           href="mailto:hello@relaflow.com"
-          class="mt-3 inline-block text-lg text-teal hover:text-white"
+          class="mt-6 inline-flex items-center gap-1.5 text-sm font-medium text-teal hover:text-white"
         >
-          hello@relaflow.com
+          Get in touch →
         </a>
+
+        <div class="mt-12 border-t border-white/10 pt-8">
+
+          <h2 class="font-display text-sm uppercase tracking-widest2 text-white/50">
+            General Enquiries
+          </h2>
+
+          <a
+            href="mailto:hello@relaflow.com"
+            class="mt-3 inline-block text-lg text-teal hover:text-white"
+          >
+            hello@relaflow.com
+          </a>
+
+        </div>
+
       </div>
+
     </div>
   </section>
 </Layout>

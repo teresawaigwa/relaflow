@@ -1,6 +1,8 @@
 ---
 title: "Why Good Relationships Go Cold: The Hidden Cost of Poor Relationship Management"
 description: "Relationships don't end because people stop caring. They end because no one was tracking them. Here's what actually causes partner and member drop-off, and why it's rarely the relationship itself."
+category: "relationship-operations"
+draft: false
 ---
 
 A sponsor doesn't wake up one morning and decide to leave. A member doesn't cancel because the organization did something wrong. Almost every "we lost them" moment has the same quiet origin story: nobody followed up at the right time, because nobody was responsible for knowing it was time.
@@ -37,6 +39,8 @@ This distinction matters because it changes what the fix looks like. You can't h
 
 ## What this doesn't solve
 
-Building that visibility is necessary, but it isn't the whole picture. A system that shows you a relationship has gone quiet still leaves the harder question open: [what happens after the event ends](/insights/articles/relationship-after-the-meeting), when the natural reason to be in touch disappears? That's a different problem: the follow-up window has closed, there's no scheduled next touchpoint, and organizations that don't plan for it lose relationships not from neglect, but from having nothing left to say.
+Building that visibility is necessary, but it isn't the whole picture. A system that shows you a relationship has gone quiet still leaves the harder question open: What happens after the event ends? When the natural reason to be in touch disappears?
+
+That's a different problem: the follow-up window has closed, there's no scheduled next touchpoint, and organizations that don't plan for it lose relationships not from neglect, but from having nothing left to say.
 
 That's worth its own answer.
