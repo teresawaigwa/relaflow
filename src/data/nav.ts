@@ -7,8 +7,8 @@ export const mainNav: NavItem[] = [
     href: '/',
   },
   {
-    label: 'About',
-    href: '/about',
+    label: 'Who We Are',
+    href: '/who-we-are',
   },
   {
     label: 'Insights',
@@ -19,16 +19,16 @@ export const mainNav: NavItem[] = [
     href: '/resources',
   },
   {
-    label: 'Contact',
+    label: 'Contact Us',
     href: '/contact',
   },
 ];
 
 export const footerExplore: NavChild[] = [
-  { label: 'About', href: '/about' },
+  { label: 'Who We Are', href: '/who-we-are' },
   { label: 'Insights', href: '/insights' },
   { label: 'Resources', href: '/resources' },
-  { label: 'Contact', href: '/contact' },
+  { label: 'Contact Us', href: '/contact' },
 ];
 
 export const socialLinks: NavChild[] = [
