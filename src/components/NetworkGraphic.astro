@@ -1,0 +1,51 @@
+---
+interface Props {
+  class?: string;
+}
+const { class: className = '' } = Astro.props;
+---
+<svg
+  class={className}
+  viewBox="0 0 600 500"
+  fill="none"
+  xmlns="http://www.w3.org/2000/svg"
+  aria-hidden="true"
+>
+  <defs>
+    <radialGradient id="nodeGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#02EEF5" stop-opacity="0.35" />
+      <stop offset="100%" stop-color="#02EEF5" stop-opacity="0" />
+    </radialGradient>
+  </defs>
+
+  <g stroke="#02EEF5" stroke-opacity="0.18" stroke-width="1">
+    <line x1="300" y1="230" x2="150" y2="90" />
+    <line x1="300" y1="230" x2="420" y2="60" />
+    <line x1="300" y1="230" x2="480" y2="200" />
+    <line x1="300" y1="230" x2="460" y2="340" />
+    <line x1="300" y1="230" x2="320" y2="420" />
+    <line x1="300" y1="230" x2="140" y2="360" />
+    <line x1="300" y1="230" x2="90" y2="220" />
+    <line x1="150" y1="90" x2="420" y2="60" />
+    <line x1="480" y1="200" x2="460" y2="340" />
+    <line x1="140" y1="360" x2="320" y2="420" />
+  </g>
+
+  <circle cx="300" cy="230" r="90" fill="url(#nodeGlow)" />
+
+  <circle cx="300" cy="230" r="34" fill="#0B1B2E" stroke="#02EEF5" stroke-width="2" />
+  <circle cx="300" cy="230" r="6" fill="#02EEF5" />
+
+  <circle cx="150" cy="90" r="16" fill="#0B1B2E" stroke="#02EEF5" stroke-opacity="0.6" stroke-width="1.5" />
+  <circle cx="420" cy="60" r="12" fill="#02EEF5" fill-opacity="0.7" />
+  <circle cx="480" cy="200" r="16" fill="#0B1B2E" stroke="#02EEF5" stroke-opacity="0.6" stroke-width="1.5" />
+  <circle cx="460" cy="340" r="10" fill="#02EEF5" fill-opacity="0.5" />
+  <circle cx="320" cy="420" r="14" fill="#0B1B2E" stroke="#02EEF5" stroke-opacity="0.6" stroke-width="1.5" />
+  <circle cx="140" cy="360" r="9" fill="#02EEF5" fill-opacity="0.6" />
+  <circle cx="90" cy="220" r="12" fill="#0B1B2E" stroke="#02EEF5" stroke-opacity="0.6" stroke-width="1.5" />
+
+  <circle cx="220" cy="150" r="2.5" fill="#02EEF5" fill-opacity="0.5" />
+  <circle cx="390" cy="150" r="2" fill="#02EEF5" fill-opacity="0.4" />
+  <circle cx="380" cy="300" r="2.5" fill="#02EEF5" fill-opacity="0.5" />
+  <circle cx="200" cy="320" r="2" fill="#02EEF5" fill-opacity="0.4" />
+</svg>

@@ -1,12 +1,10 @@
 ---
 import Layout from '../../layouts/Layout.astro';
 import PageHero from '../../components/PageHero.astro';
+import IconBadge from '../../components/IconBadge.astro';
 ---
 
-<Layout
-  title="Resources | Relaflow"
-  description="Practical tools for the business of relationships, including guides, templates, frameworks and training."
->
+<Layout title="Resources | Relaflow" description="Practical tools for the business of relationships, including guides, templates, frameworks and training.">
   <PageHero
     eyebrow="Resources"
     title="Practical tools for the business of relationships."
@@ -17,20 +15,10 @@ import PageHero from '../../components/PageHero.astro';
   <section class="mx-auto max-w-content px-6 py-16 md:px-10 md:py-20">
     <div class="grid gap-10 md:grid-cols-[1fr_1.4fr]">
       <div>
-        <h2 class="text-2xl sm:text-3xl">
-          Guides
-        </h2>
-
-        <p class="mt-4 max-w-sm text-white/70">
-          Practical resources on specific relationship-management questions, from client retention to partnership development to community engagement.
-        </p>
-
-        <a
-          href="/resources/guides"
-          class="mt-6 inline-flex items-center gap-1.5 text-sm font-medium text-teal hover:text-white"
-        >
-          Explore Guides →
-        </a>
+        <IconBadge icon="guide" />
+        <h2 class="mt-5 text-2xl sm:text-3xl">Guides</h2>
+        <p class="mt-4 max-w-sm text-white/70">Practical resources on specific relationship-management questions, from client retention to partnership development to community engagement.</p>
+        <a href="/resources/guides" class="mt-6 inline-flex items-center gap-1.5 text-sm font-medium text-teal hover:text-white">Explore Guides →</a>
       </div>
     </div>
   </section>
@@ -40,20 +28,10 @@ import PageHero from '../../components/PageHero.astro';
     <div class="mx-auto max-w-content px-6 py-16 md:px-10 md:py-20">
       <div class="grid gap-10 md:grid-cols-[1fr_1.4fr]">
         <div>
-          <h2 class="text-2xl sm:text-3xl">
-            Templates
-          </h2>
-
-          <p class="mt-4 max-w-sm text-white/70">
-            Ready-to-use tools for organizing relationship information, planning relationship work, and building consistent processes.
-          </p>
-
-          <a
-            href="/resources/templates"
-            class="mt-6 inline-flex items-center gap-1.5 text-sm font-medium text-teal hover:text-white"
-          >
-            Explore Templates →
-          </a>
+          <IconBadge icon="template" />
+          <h2 class="mt-5 text-2xl sm:text-3xl">Templates</h2>
+          <p class="mt-4 max-w-sm text-white/70">Ready-to-use tools for organizing relationship information, planning relationship work, and building consistent processes.</p>
+          <a href="/resources/templates" class="mt-6 inline-flex items-center gap-1.5 text-sm font-medium text-teal hover:text-white">Explore Templates →</a>
         </div>
       </div>
     </div>
@@ -64,20 +42,10 @@ import PageHero from '../../components/PageHero.astro';
     <div class="mx-auto max-w-content px-6 py-16 md:px-10 md:py-20">
       <div class="grid gap-10 md:grid-cols-[1fr_1.4fr]">
         <div>
-          <h2 class="text-2xl sm:text-3xl">
-            Frameworks
-          </h2>
-
-          <p class="mt-4 max-w-sm text-white/70">
-            Structured approaches to recurring relationship-management questions, built to support better decisions.
-          </p>
-
-          <a
-            href="/resources/frameworks"
-            class="mt-6 inline-flex items-center gap-1.5 text-sm font-medium text-teal hover:text-white"
-          >
-            Explore Frameworks →
-          </a>
+          <IconBadge icon="framework" />
+          <h2 class="mt-5 text-2xl sm:text-3xl">Frameworks</h2>
+          <p class="mt-4 max-w-sm text-white/70">Structured approaches to recurring relationship-management questions, built to support better decisions.</p>
+          <a href="/resources/frameworks" class="mt-6 inline-flex items-center gap-1.5 text-sm font-medium text-teal hover:text-white">Explore Frameworks →</a>
         </div>
       </div>
     </div>
@@ -86,111 +54,61 @@ import PageHero from '../../components/PageHero.astro';
   <!-- Training -->
   <section class="border-t border-white/10 bg-white/[0.02]">
     <div class="mx-auto max-w-content px-6 py-16 md:px-10 md:py-20">
-      <h2 class="text-2xl sm:text-3xl">
-        Training
-      </h2>
-
-      <p class="mt-4 max-w-2xl text-white/70">
-        Practical training that builds real relationship-management skills into your team.
-      </p>
+      <h2 class="text-2xl sm:text-3xl">Training</h2>
+      <p class="mt-4 max-w-2xl text-white/70">Practical training that builds real relationship-management skills into your team.</p>
 
       <div class="mt-8 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
 
-        <div class="rounded border border-white/10 p-6">
-          <h3 class="text-lg">
-            Client Relationship Management
-          </h3>
-
-          <p class="mt-3 text-sm leading-relaxed text-white/65">
-            Manage a client relationship from first contact through renewal, with a clear system to follow instead of guesswork.
-          </p>
+        <div class="group rounded-lg border border-white/10 bg-white/[0.02] p-6 transition-all hover:-translate-y-1 hover:border-teal/40 hover:bg-white/[0.04] hover:shadow-[0_0_30px_-10px_rgba(2,238,245,0.35)]">
+          <IconBadge icon="clients" />
+          <h3 class="mt-5 text-lg">Client Relationship Management</h3>
+          <p class="mt-3 text-sm leading-relaxed text-white/65">Manage a client relationship from first contact through renewal, with a clear system to follow instead of guesswork.</p>
         </div>
 
-        <div class="rounded border border-white/10 p-6">
-          <h3 class="text-lg">
-            Partnership and Sponsorship Development
-          </h3>
-
-          <p class="mt-3 text-sm leading-relaxed text-white/65">
-            Identify the right partners, build the relationship, and keep delivering value long after the first meeting.
-          </p>
+        <div class="group rounded-lg border border-white/10 bg-white/[0.02] p-6 transition-all hover:-translate-y-1 hover:border-teal/40 hover:bg-white/[0.04] hover:shadow-[0_0_30px_-10px_rgba(2,238,245,0.35)]">
+          <IconBadge icon="partnerships" />
+          <h3 class="mt-5 text-lg">Partnership and Sponsorship Development</h3>
+          <p class="mt-3 text-sm leading-relaxed text-white/65">Identify the right partners, build the relationship, and keep delivering value long after the first meeting.</p>
         </div>
 
-        <div class="rounded border border-white/10 p-6">
-          <h3 class="text-lg">
-            Community Building and Engagement
-          </h3>
-
-          <p class="mt-3 text-sm leading-relaxed text-white/65">
-            Grow a community or audience and keep people engaged between events and interactions.
-          </p>
+        <div class="group rounded-lg border border-white/10 bg-white/[0.02] p-6 transition-all hover:-translate-y-1 hover:border-teal/40 hover:bg-white/[0.04] hover:shadow-[0_0_30px_-10px_rgba(2,238,245,0.35)]">
+          <IconBadge icon="community" />
+          <h3 class="mt-5 text-lg">Community Building and Engagement</h3>
+          <p class="mt-3 text-sm leading-relaxed text-white/65">Grow a community or audience and keep people engaged between events and interactions.</p>
         </div>
 
-        <div class="rounded border border-white/10 p-6">
-          <h3 class="text-lg">
-            Relationship Data and CRM Management
-          </h3>
-
-          <p class="mt-3 text-sm leading-relaxed text-white/65">
-            Keep relationship information organized, current, and useful for decision-making.
-          </p>
+        <div class="group rounded-lg border border-white/10 bg-white/[0.02] p-6 transition-all hover:-translate-y-1 hover:border-teal/40 hover:bg-white/[0.04] hover:shadow-[0_0_30px_-10px_rgba(2,238,245,0.35)]">
+          <IconBadge icon="crm" />
+          <h3 class="mt-5 text-lg">Relationship Data and CRM Management</h3>
+          <p class="mt-3 text-sm leading-relaxed text-white/65">Keep relationship information organized, current, and useful for decision-making.</p>
         </div>
 
-        <div class="rounded border border-white/10 p-6">
-          <h3 class="text-lg">
-            Stakeholder Research and Market Intelligence
-          </h3>
-
-          <p class="mt-3 text-sm leading-relaxed text-white/65">
-            Gather and use the right information about markets, stakeholders, and networks to make better decisions.
-          </p>
+        <div class="group rounded-lg border border-white/10 bg-white/[0.02] p-6 transition-all hover:-translate-y-1 hover:border-teal/40 hover:bg-white/[0.04] hover:shadow-[0_0_30px_-10px_rgba(2,238,245,0.35)]">
+          <IconBadge icon="research" />
+          <h3 class="mt-5 text-lg">Stakeholder Research and Market Intelligence</h3>
+          <p class="mt-3 text-sm leading-relaxed text-white/65">Gather and use the right information about markets, stakeholders, and networks to make better decisions.</p>
         </div>
 
       </div>
 
-      <a
-        href="/contact"
-        class="mt-8 inline-flex items-center gap-1.5 text-sm font-medium text-teal hover:text-white"
-      >
-        Explore Training →
-      </a>
+      <a href="/contact" class="mt-8 inline-flex items-center gap-1.5 text-sm font-medium text-teal hover:text-white">Explore Training →</a>
     </div>
   </section>
 
   <!-- Relaflow Playbooks -->
   <section class="border-t border-white/10">
     <div class="mx-auto max-w-content px-6 py-16 md:px-10 md:py-20">
-
-      <h2 class="text-2xl sm:text-3xl">
-        The Relaflow Playbooks
-      </h2>
-
-      <p class="mt-4 max-w-2xl text-white/70">
-        Practical frameworks for recurring relationship-management questions.
-      </p>
-
+      <h2 class="text-2xl sm:text-3xl">The Relaflow Playbooks</h2>
+      <p class="mt-4 max-w-2xl text-white/70">Practical frameworks for recurring relationship-management questions.</p>
     </div>
   </section>
 
   <!-- Get the Resources -->
   <section class="border-t border-white/10 bg-white/[0.02]">
     <div class="mx-auto max-w-content px-6 py-16 md:px-10 md:py-20">
-
-      <h2 class="text-2xl sm:text-3xl">
-        Get the Resources
-      </h2>
-
-      <p class="mt-4 max-w-2xl text-white/70">
-        Subscribe to get new guides, templates, frameworks, and playbooks.
-      </p>
-
-      <a
-        href="/#newsletter"
-        class="mt-6 inline-flex items-center gap-1.5 text-sm font-medium text-teal hover:text-white"
-      >
-        Get Resources →
-      </a>
-
+      <h2 class="text-2xl sm:text-3xl">Get the Resources</h2>
+      <p class="mt-4 max-w-2xl text-white/70">Subscribe to get new guides, templates, frameworks, and playbooks.</p>
+      <a href="/#newsletter" class="mt-6 inline-flex items-center gap-1.5 text-sm font-medium text-teal hover:text-white">Get Resources →</a>
     </div>
   </section>
 </Layout>

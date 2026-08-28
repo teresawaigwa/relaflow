@@ -1,32 +1,19 @@
 ---
 import Layout from '../../layouts/Layout.astro';
+import IconBadge from '../../components/IconBadge.astro';
+import NetworkGraphic from '../../components/NetworkGraphic.astro';
 ---
-
-<Layout
-  title="About Relaflow | The systems behind lasting relationships"
-  description="Relaflow provides the media, advisory, and training organizations need to effectively navigate and strengthen their vital relationships."
->
+<Layout title="About Relaflow | The systems behind lasting relationships" description="Relaflow provides the media, advisory, and training organizations need to effectively navigate and strengthen their vital relationships.">
   <!-- About Us -->
-  <section class="mx-auto max-w-content px-6 pt-20 pb-20 md:px-10 md:pt-28 md:pb-24">
-    <div class="max-w-3xl">
-      
+  <section class="relative mx-auto max-w-content overflow-hidden px-6 pt-20 pb-20 md:px-10 md:pt-28 md:pb-24">
+    <NetworkGraphic class="pointer-events-none absolute -right-16 -top-16 hidden h-[420px] w-[420px] opacity-70 md:block lg:-right-20 lg:h-[520px] lg:w-[520px]" />
 
-      <h1 class="mt-5 text-4xl leading-[1.1] sm:text-5xl md:text-6xl">
-        About Us
-      </h1>
-
+    <div class="relative max-w-3xl">
+      <h1 class="mt-5 text-4xl leading-[1.1] sm:text-5xl md:text-6xl">About Us</h1>
       <div class="mt-7 max-w-2xl space-y-4 text-lg leading-relaxed text-white/75">
-        <p>
-          Relaflow provides the media, advisory, and training organizations need to effectively navigate and strengthen their vital relationships.
-        </p>
-
-        <p>
-          We believe relationships hold up best when they are supported by clear systems, good information, and consistent follow-through.
-        </p>
-
-        <p>
-          Everything we do, from sharing insights to hands-on advisory work, is built around that belief, helping organizations bring more structure and consistency to the relationships that matter most to them.
-        </p>
+        <p>Relaflow provides the media, advisory, and training organizations need to effectively navigate and strengthen their vital relationships.</p>
+        <p>We believe relationships hold up best when they are supported by clear systems, good information, and consistent follow-through.</p>
+        <p>Everything we do, from sharing insights to hands-on advisory work, is built around that belief, helping organizations bring more structure and consistency to the relationships that matter most to them.</p>
       </div>
     </div>
   </section>
@@ -34,51 +21,31 @@ import Layout from '../../layouts/Layout.astro';
   <!-- Our Approach -->
   <section class="border-t border-white/10 bg-white/[0.02]">
     <div class="mx-auto max-w-content px-6 py-20 md:px-10 md:py-24">
-
-      <h2 class="text-2xl sm:text-3xl">
-        Our Approach
-      </h2>
-
+      <h2 class="text-2xl sm:text-3xl">Our Approach</h2>
       <div class="mt-8 grid gap-5 sm:grid-cols-2">
 
-        <div class="rounded border border-white/10 p-6 sm:p-8">
-          <h3 class="text-xl">
-            We build systems organizations can run themselves.
-          </h3>
-
-          <p class="mt-3 text-sm leading-relaxed text-white/65">
-            We help organizations develop the processes and skills to manage their own relationships well.
-          </p>
+        <div class="group rounded-lg border border-white/10 bg-white/[0.02] p-6 transition-all hover:-translate-y-1 hover:border-teal/40 hover:bg-white/[0.04] hover:shadow-[0_0_30px_-10px_rgba(2,238,245,0.35)] sm:p-8">
+          <IconBadge icon="selfrun" />
+          <h3 class="mt-5 text-xl">We build systems organizations can run themselves.</h3>
+          <p class="mt-3 text-sm leading-relaxed text-white/65">We help organizations develop the processes and skills to manage their own relationships well.</p>
         </div>
 
-        <div class="rounded border border-white/10 p-6 sm:p-8">
-          <h3 class="text-xl">
-            We build for repeatability.
-          </h3>
-
-          <p class="mt-3 text-sm leading-relaxed text-white/65">
-            We help organizations create systems, manual or automated, that keep relationship history and progress intact, even as staff or roles change.
-          </p>
+        <div class="group rounded-lg border border-white/10 bg-white/[0.02] p-6 transition-all hover:-translate-y-1 hover:border-teal/40 hover:bg-white/[0.04] hover:shadow-[0_0_30px_-10px_rgba(2,238,245,0.35)] sm:p-8">
+          <IconBadge icon="repeatable" />
+          <h3 class="mt-5 text-xl">We build for repeatability.</h3>
+          <p class="mt-3 text-sm leading-relaxed text-white/65">We help organizations create systems, manual or automated, that keep relationship history and progress intact, even as staff or roles change.</p>
         </div>
 
-        <div class="rounded border border-white/10 p-6 sm:p-8">
-          <h3 class="text-xl">
-            We keep it simple.
-          </h3>
-
-          <p class="mt-3 text-sm leading-relaxed text-white/65">
-            We use plain language and practical tools that are easy to apply.
-          </p>
+        <div class="group rounded-lg border border-white/10 bg-white/[0.02] p-6 transition-all hover:-translate-y-1 hover:border-teal/40 hover:bg-white/[0.04] hover:shadow-[0_0_30px_-10px_rgba(2,238,245,0.35)] sm:p-8">
+          <IconBadge icon="simple" />
+          <h3 class="mt-5 text-xl">We keep it simple.</h3>
+          <p class="mt-3 text-sm leading-relaxed text-white/65">We use plain language and practical tools that are easy to apply.</p>
         </div>
 
-        <div class="rounded border border-white/10 p-6 sm:p-8">
-          <h3 class="text-xl">
-            We treat this as ongoing work.
-          </h3>
-
-          <p class="mt-3 text-sm leading-relaxed text-white/65">
-            We help organizations keep refining how they manage relationships over time.
-          </p>
+        <div class="group rounded-lg border border-white/10 bg-white/[0.02] p-6 transition-all hover:-translate-y-1 hover:border-teal/40 hover:bg-white/[0.04] hover:shadow-[0_0_30px_-10px_rgba(2,238,245,0.35)] sm:p-8">
+          <IconBadge icon="ongoing" />
+          <h3 class="mt-5 text-xl">We treat this as ongoing work.</h3>
+          <p class="mt-3 text-sm leading-relaxed text-white/65">We help organizations keep refining how they manage relationships over time.</p>
         </div>
 
       </div>

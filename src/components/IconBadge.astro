@@ -1,0 +1,141 @@
+---
+interface Props {
+  icon: 'insights' | 'advisory' | 'training' | 'operations' | 'clients' | 'partnerships' | 'events' | 'research' | 'selfrun' | 'repeatable' | 'simple' | 'ongoing' | 'guide' | 'template' | 'framework' | 'community' | 'crm';
+  class?: string;
+}
+const { icon, class: className = '' } = Astro.props;
+---
+<span class={`relative inline-flex h-14 w-14 items-center justify-center rounded-full border border-teal/40 bg-teal/5 transition-colors group-hover:border-teal group-hover:bg-teal/10 ${className}`}>
+  {icon === 'insights' && (
+    <svg viewBox="0 0 24 24" fill="none" class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <rect x="5" y="4" width="11" height="16" rx="1" stroke="#02EEF5" stroke-width="1.5" />
+      <line x1="8" y1="8" x2="13" y2="8" stroke="#02EEF5" stroke-width="1.5" stroke-linecap="round" />
+      <line x1="8" y1="11" x2="13" y2="11" stroke="#02EEF5" stroke-width="1.5" stroke-linecap="round" />
+      <circle cx="16.5" cy="15.5" r="3" stroke="#02EEF5" stroke-width="1.5" />
+      <line x1="18.6" y1="17.6" x2="20.5" y2="19.5" stroke="#02EEF5" stroke-width="1.5" stroke-linecap="round" />
+    </svg>
+  )}
+  {icon === 'advisory' && (
+    <svg viewBox="0 0 24 24" fill="none" class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <circle cx="9" cy="8" r="3" stroke="#02EEF5" stroke-width="1.5" />
+      <path d="M4 19c0-2.8 2.2-5 5-5s5 2.2 5 5" stroke="#02EEF5" stroke-width="1.5" stroke-linecap="round" />
+      <circle cx="17" cy="7" r="2.2" stroke="#02EEF5" stroke-width="1.5" />
+      <path d="M14.5 19c0-2.2 1.2-4 3-4.6" stroke="#02EEF5" stroke-width="1.5" stroke-linecap="round" />
+    </svg>
+  )}
+  {icon === 'training' && (
+    <svg viewBox="0 0 24 24" fill="none" class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <rect x="4" y="4" width="7" height="7" rx="1" stroke="#02EEF5" stroke-width="1.5" />
+      <rect x="13" y="4" width="7" height="7" rx="1" stroke="#02EEF5" stroke-width="1.5" stroke-opacity="0.5" />
+      <rect x="4" y="13" width="7" height="7" rx="1" stroke="#02EEF5" stroke-width="1.5" stroke-opacity="0.5" />
+      <path d="M15 16.2l1.4 1.4 2.6-2.8" stroke="#02EEF5" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+    </svg>
+  )}
+  {icon === 'operations' && (
+    <svg viewBox="0 0 24 24" fill="none" class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <circle cx="12" cy="12" r="2.2" stroke="#02EEF5" stroke-width="1.5" />
+      <circle cx="12" cy="4.5" r="1.6" stroke="#02EEF5" stroke-width="1.5" />
+      <circle cx="19" cy="16" r="1.6" stroke="#02EEF5" stroke-width="1.5" />
+      <circle cx="5" cy="16" r="1.6" stroke="#02EEF5" stroke-width="1.5" />
+      <line x1="12" y1="9.8" x2="12" y2="6.1" stroke="#02EEF5" stroke-width="1.5" />
+      <line x1="13.9" y1="13.2" x2="17.5" y2="15.1" stroke="#02EEF5" stroke-width="1.5" />
+      <line x1="10.1" y1="13.2" x2="6.5" y2="15.1" stroke="#02EEF5" stroke-width="1.5" />
+    </svg>
+  )}
+  {icon === 'clients' && (
+    <svg viewBox="0 0 24 24" fill="none" class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <circle cx="12" cy="8" r="3.2" stroke="#02EEF5" stroke-width="1.5" />
+      <path d="M5.5 19.5c0-3.6 2.9-6.3 6.5-6.3s6.5 2.7 6.5 6.3" stroke="#02EEF5" stroke-width="1.5" stroke-linecap="round" />
+    </svg>
+  )}
+  {icon === 'partnerships' && (
+    <svg viewBox="0 0 24 24" fill="none" class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <path d="M3.5 12.5l3.6-3.6c.6-.6 1.6-.6 2.2 0l1 1" stroke="#02EEF5" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+      <path d="M20.5 12.5l-3.6-3.6c-.6-.6-1.6-.6-2.2 0l-4.5 4.5c-.6.6-.6 1.6 0 2.2s1.6.6 2.2 0l1.7-1.7" stroke="#02EEF5" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+      <path d="M9.5 16.3l1.3 1.3c.6.6 1.6.6 2.2 0" stroke="#02EEF5" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+    </svg>
+  )}
+  {icon === 'events' && (
+    <svg viewBox="0 0 24 24" fill="none" class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <rect x="4" y="5" width="16" height="15" rx="1.5" stroke="#02EEF5" stroke-width="1.5" />
+      <line x1="4" y1="9.5" x2="20" y2="9.5" stroke="#02EEF5" stroke-width="1.5" />
+      <line x1="8" y1="3" x2="8" y2="6.5" stroke="#02EEF5" stroke-width="1.5" stroke-linecap="round" />
+      <line x1="16" y1="3" x2="16" y2="6.5" stroke="#02EEF5" stroke-width="1.5" stroke-linecap="round" />
+      <circle cx="9" cy="14" r="1.1" fill="#02EEF5" />
+      <circle cx="13" cy="14" r="1.1" fill="#02EEF5" fill-opacity="0.5" />
+      <circle cx="9" cy="17.3" r="1.1" fill="#02EEF5" fill-opacity="0.5" />
+    </svg>
+  )}
+  {icon === 'research' && (
+    <svg viewBox="0 0 24 24" fill="none" class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <line x1="5" y1="19" x2="5" y2="12" stroke="#02EEF5" stroke-width="1.5" stroke-linecap="round" />
+      <line x1="10" y1="19" x2="10" y2="8" stroke="#02EEF5" stroke-width="1.5" stroke-linecap="round" />
+      <line x1="15" y1="19" x2="15" y2="11" stroke="#02EEF5" stroke-width="1.5" stroke-linecap="round" />
+      <line x1="19" y1="19" x2="19" y2="5" stroke="#02EEF5" stroke-width="1.5" stroke-linecap="round" />
+    </svg>
+  )}
+  {icon === 'selfrun' && (
+    <svg viewBox="0 0 24 24" fill="none" class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <circle cx="12" cy="12" r="7.5" stroke="#02EEF5" stroke-width="1.5" />
+      <path d="M12 8.5v3.5l2.3 2.3" stroke="#02EEF5" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+      <path d="M17.5 6.5l1.5-1" stroke="#02EEF5" stroke-width="1.5" stroke-linecap="round" />
+    </svg>
+  )}
+  {icon === 'repeatable' && (
+    <svg viewBox="0 0 24 24" fill="none" class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <path d="M5 8a7 7 0 0 1 12.1-2.5" stroke="#02EEF5" stroke-width="1.5" stroke-linecap="round" />
+      <path d="M17.3 4.3v3.4h-3.4" stroke="#02EEF5" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+      <path d="M19 16a7 7 0 0 1-12.1 2.5" stroke="#02EEF5" stroke-width="1.5" stroke-linecap="round" />
+      <path d="M6.7 19.7v-3.4h3.4" stroke="#02EEF5" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+    </svg>
+  )}
+  {icon === 'simple' && (
+    <svg viewBox="0 0 24 24" fill="none" class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <circle cx="12" cy="12" r="8" stroke="#02EEF5" stroke-width="1.5" />
+      <circle cx="12" cy="12" r="3.2" fill="#02EEF5" fill-opacity="0.7" />
+    </svg>
+  )}
+  {icon === 'ongoing' && (
+    <svg viewBox="0 0 24 24" fill="none" class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <path d="M4 12a8 8 0 1 1 3 6.3" stroke="#02EEF5" stroke-width="1.5" stroke-linecap="round" />
+      <path d="M4 16v-3h3" stroke="#02EEF5" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+    </svg>
+  )}
+  {icon === 'guide' && (
+    <svg viewBox="0 0 24 24" fill="none" class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <path d="M4 5.5c0-.8.7-1.5 1.5-1.5H11v15H5.5c-.8 0-1.5.7-1.5 1.5v-15z" stroke="#02EEF5" stroke-width="1.5" stroke-linejoin="round" />
+      <path d="M20 5.5c0-.8-.7-1.5-1.5-1.5H13v15h5.5c.8 0 1.5.7 1.5 1.5v-15z" stroke="#02EEF5" stroke-width="1.5" stroke-linejoin="round" />
+    </svg>
+  )}
+  {icon === 'template' && (
+    <svg viewBox="0 0 24 24" fill="none" class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <rect x="4" y="4" width="16" height="16" rx="1.5" stroke="#02EEF5" stroke-width="1.5" />
+      <line x1="4" y1="9.5" x2="20" y2="9.5" stroke="#02EEF5" stroke-width="1.5" />
+      <line x1="10" y1="9.5" x2="10" y2="20" stroke="#02EEF5" stroke-width="1.5" />
+    </svg>
+  )}
+  {icon === 'framework' && (
+    <svg viewBox="0 0 24 24" fill="none" class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <rect x="4" y="4" width="6" height="6" rx="1" stroke="#02EEF5" stroke-width="1.5" />
+      <rect x="14" y="4" width="6" height="6" rx="1" stroke="#02EEF5" stroke-width="1.5" stroke-opacity="0.6" />
+      <rect x="9" y="14" width="6" height="6" rx="1" stroke="#02EEF5" stroke-width="1.5" stroke-opacity="0.6" />
+      <path d="M7 10v2a2 2 0 0 0 2 2h1" stroke="#02EEF5" stroke-width="1.5" stroke-linecap="round" />
+      <path d="M17 10v2a2 2 0 0 1-2 2h-1" stroke="#02EEF5" stroke-width="1.5" stroke-linecap="round" />
+    </svg>
+  )}
+  {icon === 'community' && (
+    <svg viewBox="0 0 24 24" fill="none" class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <circle cx="8" cy="9" r="2.6" stroke="#02EEF5" stroke-width="1.5" />
+      <circle cx="16" cy="9" r="2.6" stroke="#02EEF5" stroke-width="1.5" stroke-opacity="0.6" />
+      <path d="M3.3 19c.4-2.8 2.4-4.8 4.7-4.8s4.3 2 4.7 4.8" stroke="#02EEF5" stroke-width="1.5" stroke-linecap="round" />
+      <path d="M11.3 14.5c2 .3 3.7 2.1 4.1 4.5" stroke="#02EEF5" stroke-width="1.5" stroke-linecap="round" />
+    </svg>
+  )}
+  {icon === 'crm' && (
+    <svg viewBox="0 0 24 24" fill="none" class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <ellipse cx="12" cy="6" rx="7" ry="2.5" stroke="#02EEF5" stroke-width="1.5" />
+      <path d="M5 6v6c0 1.4 3.1 2.5 7 2.5s7-1.1 7-2.5V6" stroke="#02EEF5" stroke-width="1.5" />
+      <path d="M5 12v6c0 1.4 3.1 2.5 7 2.5s7-1.1 7-2.5v-6" stroke="#02EEF5" stroke-width="1.5" />
+    </svg>
+  )}
+</span>

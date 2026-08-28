@@ -12,7 +12,7 @@ export default {
         grey: '#A4A9AE',      // Tagline / secondary text
       },
       fontFamily: {
-        display: ['"Space Grotesk"', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+        display: ['"Inter"', 'ui-sans-serif', 'system-ui', 'sans-serif'],
         body: ['"Inter"', 'ui-sans-serif', 'system-ui', 'sans-serif'],
       },
       maxWidth: {

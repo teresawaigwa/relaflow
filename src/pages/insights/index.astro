@@ -1,6 +1,8 @@
 ---
 import Layout from '../../layouts/Layout.astro';
 import { getCollection } from 'astro:content';
+import NetworkGraphic from '../../components/NetworkGraphic.astro';
+import IconBadge from '../../components/IconBadge.astro';
 
 const allInsights = await getCollection(
   'insights',
@@ -13,52 +15,50 @@ const expertiseAreas = [
     title: 'Relationship Operations',
     description:
       'The practical work behind managing relationships: relationship data, CRM, follow-up, and the day-to-day processes and workflows that hold it together.',
+    icon: 'operations',
   },
   {
     slug: 'client-relationships',
     title: 'Client Relationships',
     description:
       'Client acquisition, onboarding, retention, and the processes and information behind keeping clients long-term.',
+    icon: 'clients',
   },
   {
     slug: 'partnerships-sponsorships',
     title: 'Partnerships and Sponsorships',
     description:
       'Identifying and developing partners and sponsors, and the processes that make those relationships last.',
+    icon: 'partnerships',
   },
   {
     slug: 'events-communities',
     title: 'Events and Communities',
     description:
       'Building communities, increasing participation, and turning events and one-off interactions into ongoing relationships.',
+    icon: 'events',
   },
   {
     slug: 'research-data',
     title: 'Research and Data',
     description:
       'Markets, stakeholders, and networks, and the information organizations need to make better relationship decisions.',
+    icon: 'research',
   },
-];
+] as const;
 ---
 
-<Layout
-  title="Insights | The Business of Relationships"
-  description="Guides, research, and perspectives on relationship systems and processes."
->
+<Layout title="Insights | The Business of Relationships" description="Guides, research, and perspectives on relationship systems and processes.">
   <!-- Hero -->
-  <section class="mx-auto max-w-content px-6 pt-20 pb-16 md:px-10 md:pt-28 md:pb-20">
-    <div class="max-w-3xl">
-      <p class="font-display text-sm uppercase tracking-widest2 text-teal">
-        Insights
-      </p>
+  <section class="relative mx-auto max-w-content overflow-hidden px-6 pt-20 pb-16 md:px-10 md:pt-28 md:pb-20">
+    <NetworkGraphic class="pointer-events-none absolute -right-16 -top-16 hidden h-[420px] w-[420px] opacity-70 md:block lg:-right-20 lg:h-[520px] lg:w-[520px]" />
 
-      <h1 class="mt-5 text-4xl leading-[1.1] sm:text-5xl md:text-6xl">
-        Guides, research, and perspectives on relationship systems and processes.
-      </h1>
+    <div class="relative max-w-3xl">
+      <p class="font-display text-sm uppercase tracking-widest2 text-teal">Insights</p>
 
-      <p class="mt-7 max-w-2xl text-lg leading-relaxed text-white/75">
-        Relaflow publishes practical work on how organizations manage the relationships they depend on, and the thinking behind it.
-      </p>
+      <h1 class="mt-5 text-4xl leading-[1.1] sm:text-5xl md:text-6xl">Guides, research, and perspectives on relationship systems and processes.</h1>
+
+      <p class="mt-7 max-w-2xl text-lg leading-relaxed text-white/75">Relaflow publishes practical work on how organizations manage the relationships they depend on, and the thinking behind it.</p>
     </div>
   </section>
 
@@ -78,7 +78,8 @@ const expertiseAreas = [
         <div class="mx-auto max-w-content px-6 py-20 md:px-10 md:py-24">
 
           <div class="max-w-3xl">
-            <h2 class="text-2xl sm:text-3xl">
+            <IconBadge icon={area.icon} />
+            <h2 class="mt-5 text-2xl sm:text-3xl">
               {area.title}
             </h2>
 
@@ -90,10 +91,7 @@ const expertiseAreas = [
           {insights.length > 0 ? (
             <div class="mt-8 grid gap-5 md:grid-cols-2">
               {insights.map((insight) => (
-                <a
-                  href={`/insights/${insight.id}/`}
-                  class="group block rounded border border-white/10 p-6 transition-colors hover:border-teal/50 sm:p-8"
-                >
+                <a href={`/insights/${insight.id}/`} class="group block rounded-lg border border-white/10 bg-white/[0.02] p-6 transition-all hover:-translate-y-1 hover:border-teal/40 hover:bg-white/[0.04] hover:shadow-[0_0_30px_-10px_rgba(2,238,245,0.35)] sm:p-8">
                   <p class="font-display text-sm uppercase tracking-widest2 text-teal">
                     Insight
                   </p>
@@ -141,12 +139,7 @@ const expertiseAreas = [
           Get new insights, research, and practical resources from Relaflow, straight to your inbox.
         </p>
 
-        <a
-          href="/#newsletter"
-          class="mt-6 inline-flex items-center gap-1.5 text-sm font-medium text-teal"
-        >
-          Subscribe →
-        </a>
+        <a href="/#newsletter" class="mt-6 inline-flex items-center gap-1.5 text-sm font-medium text-teal">Subscribe →</a>
       </div>
     </div>
   </section>

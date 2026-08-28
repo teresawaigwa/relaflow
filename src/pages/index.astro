@@ -2,96 +2,55 @@
 import Layout from '../layouts/Layout.astro';
 import FlowLine from '../components/FlowLine.astro';
 import Newsletter from '../components/Newsletter.astro';
+import NetworkGraphic from '../components/NetworkGraphic.astro';
+import IconBadge from '../components/IconBadge.astro';
 ---
 
-<Layout
-  title="Relaflow | The systems behind lasting relationships"
-  description="Relaflow is a media, advisory, and training brand built around the systems, methods, and workflows organizations use to manage the relationships they depend on."
->
+<Layout title="Relaflow | The systems behind lasting relationships" description="Relaflow is a media, advisory, and training brand built around the systems, methods, and workflows organizations use to manage the relationships they depend on.">
   <!-- Hero -->
-  <section class="mx-auto max-w-content px-6 pt-20 pb-16 md:px-10 md:pt-28 md:pb-24">
-    <div class="max-w-3xl">
-      <p class="font-display text-sm uppercase tracking-widest2 text-teal">
-        Welcome to Relaflow
-      </p>
+  <section class="relative mx-auto max-w-content overflow-hidden px-6 pt-20 pb-16 md:px-10 md:pt-28 md:pb-24">
+    <NetworkGraphic class="pointer-events-none absolute -right-16 -top-16 hidden h-[480px] w-[480px] opacity-70 md:block lg:-right-24 lg:h-[600px] lg:w-[600px]" />
 
-      <h1 class="mt-5 text-4xl leading-[1.1] sm:text-5xl md:text-6xl">
-        The systems behind lasting relationships
-      </h1>
+    <div class="relative max-w-3xl">
+      <p class="font-display text-sm uppercase tracking-widest2 text-teal">Welcome to Relaflow</p>
 
-      <p class="mt-7 max-w-2xl text-lg leading-relaxed text-white/75">
-        Relaflow is a media, advisory, and training brand built around the systems, methods, and workflows organizations use to manage the relationships they depend on.
-      </p>
+      <h1 class="mt-5 text-4xl leading-[1.1] sm:text-5xl md:text-6xl">The systems behind lasting relationships</h1>
 
-      <p class="mt-4 max-w-2xl text-lg leading-relaxed text-white/75">
-        We focus on how organizations find, acquire, manage, and retain clients, partners, sponsors, and communities, and we build the processes that make that work repeatable.
-      </p>
+      <p class="mt-7 max-w-2xl text-lg leading-relaxed text-white/75">Relaflow is a media, advisory, and training brand built around the systems, methods, and workflows organizations use to manage the relationships they depend on.</p>
 
-      <p class="mt-4 max-w-2xl text-lg leading-relaxed text-white/75">
-        Through practical research, frameworks, masterclasses, and hands-on advisory, we help teams spot where their current methods fail and put clear, reliable operational systems in place.
-      </p>
+      <p class="mt-4 max-w-2xl text-lg leading-relaxed text-white/75">We focus on how organizations find, acquire, manage, and retain clients, partners, sponsors, and communities, and we build the processes that make that work repeatable.</p>
+
+      <p class="mt-4 max-w-2xl text-lg leading-relaxed text-white/75">Through practical research, frameworks, masterclasses, and hands-on advisory, we help teams spot where their current methods fail and put clear, reliable operational systems in place.</p>
     </div>
 
-    <FlowLine nodes={6} class="mt-16 h-8" />
+    <FlowLine nodes={6} class="relative mt-16 h-8" />
   </section>
 
   <!-- What We Do -->
   <section class="mx-auto max-w-content px-6 pb-20 md:px-10 md:pb-28">
-    <h2 class="text-2xl sm:text-3xl">
-      What We Do
-    </h2>
+    <h2 class="text-2xl sm:text-3xl">What We Do</h2>
 
     <div class="mt-8 grid gap-5 sm:grid-cols-3">
 
-      <a
-        href="/insights"
-        class="group rounded border border-white/10 p-6 transition-colors hover:border-teal/50 sm:p-8"
-      >
-        <h3 class="text-xl">
-          Media and Insights
-        </h3>
-
-        <p class="mt-3 text-sm leading-relaxed text-white/65">
-          Practical insights and guides on the systems and processes behind managing and retaining clients, partners, sponsors, and communities.
-        </p>
-
-        <span class="mt-6 inline-flex items-center gap-1.5 text-sm font-medium text-teal">
-          Explore Insights →
-        </span>
+      <a href="/insights" class="group rounded-lg border border-white/10 bg-white/[0.02] p-6 transition-all hover:-translate-y-1 hover:border-teal/40 hover:bg-white/[0.04] hover:shadow-[0_0_30px_-10px_rgba(2,238,245,0.35)] sm:p-8">
+        <IconBadge icon="insights" />
+        <h3 class="mt-5 text-xl">Media and Insights</h3>
+        <p class="mt-3 text-sm leading-relaxed text-white/65">Practical insights and guides on the systems and processes behind managing and retaining clients, partners, sponsors, and communities.</p>
+        <span class="mt-6 inline-flex items-center gap-1.5 text-sm font-medium text-teal">Explore Insights →</span>
       </a>
 
-      <a
-        href="/contact"
-        class="group rounded border border-white/10 p-6 transition-colors hover:border-teal/50 sm:p-8"
-      >
-        <h3 class="text-xl">
-          Strategic Advisory
-        </h3>
-
-        <p class="mt-3 text-sm leading-relaxed text-white/65">
-          We work directly with your team to build the systems you can implement to close the gaps in how you manage relationships, from onboarding to partner tracking to follow-up.
-        </p>
-
-        <span class="mt-6 inline-flex items-center gap-1.5 text-sm font-medium text-teal">
-          Contact Us →
-        </span>
+      <a href="/contact" class="group rounded-lg border border-white/10 bg-white/[0.02] p-6 transition-all hover:-translate-y-1 hover:border-teal/40 hover:bg-white/[0.04] hover:shadow-[0_0_30px_-10px_rgba(2,238,245,0.35)] sm:p-8">
+        <IconBadge icon="advisory" />
+        <h3 class="mt-5 text-xl">Strategic Advisory</h3>
+        <p class="mt-3 text-sm leading-relaxed text-white/65">We work directly with your team to build the systems you can implement to close the gaps in how you manage relationships, from onboarding to partner tracking to follow-up.</p>
+        <span class="mt-6 inline-flex items-center gap-1.5 text-sm font-medium text-teal">Contact Us →</span>
       </a>
 
-      <a
-        href="/resources"
-        class="group rounded border border-white/10 p-6 transition-colors hover:border-teal/50 sm:p-8"
-      >
-        <h3 class="text-xl">
-          Training and Frameworks
-        </h3>
-
-        <p class="mt-3 text-sm leading-relaxed text-white/65">
-          Masterclasses and ready-to-use frameworks that teach your team how to run relationship processes themselves.
-        </p>
-
-        <span class="mt-6 inline-flex items-center gap-1.5 text-sm font-medium text-teal">
-          Explore Resources →
-        </span>
+      <a href="/resources" class="group rounded-lg border border-white/10 bg-white/[0.02] p-6 transition-all hover:-translate-y-1 hover:border-teal/40 hover:bg-white/[0.04] hover:shadow-[0_0_30px_-10px_rgba(2,238,245,0.35)] sm:p-8">
+        <IconBadge icon="training" />
+        <h3 class="mt-5 text-xl">Training and Frameworks</h3>
+        <p class="mt-3 text-sm leading-relaxed text-white/65">Masterclasses and ready-to-use frameworks that teach your team how to run relationship processes themselves.</p>
+        <span class="mt-6 inline-flex items-center gap-1.5 text-sm font-medium text-teal">Explore Resources →</span>
       </a>
 
     </div>
@@ -101,139 +60,73 @@ import Newsletter from '../components/Newsletter.astro';
   <section class="border-t border-white/10 bg-white/[0.02]">
     <div class="mx-auto max-w-content px-6 py-20 md:px-10 md:py-24">
 
-      <h2 class="text-2xl sm:text-3xl">
-        Our Expertise
-      </h2>
+      <h2 class="text-2xl sm:text-3xl">Our Expertise</h2>
 
       <div class="mt-8 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
 
-        <div class="rounded border border-white/10 p-6 sm:p-8">
-          <h3 class="text-xl">
-            Relationship Operations
-          </h3>
-
-          <p class="mt-3 text-sm leading-relaxed text-white/65">
-            Information, processes, and systems that help organizations manage relationships consistently, from first contact to long-term retention.
-          </p>
+        <div class="group rounded-lg border border-white/10 bg-white/[0.02] p-6 transition-all hover:-translate-y-1 hover:border-teal/40 hover:bg-white/[0.04] hover:shadow-[0_0_30px_-10px_rgba(2,238,245,0.35)] sm:p-8">
+          <IconBadge icon="operations" />
+          <h3 class="mt-5 text-xl">Relationship Operations</h3>
+          <p class="mt-3 text-sm leading-relaxed text-white/65">Information, processes, and systems that help organizations manage relationships consistently, from first contact to long-term retention.</p>
         </div>
 
-        <div class="rounded border border-white/10 p-6 sm:p-8">
-          <h3 class="text-xl">
-            Client Relationships
-          </h3>
-
-          <p class="mt-3 text-sm leading-relaxed text-white/65">
-            Processes organizations use to acquire, manage, and retain clients well.
-          </p>
+        <div class="group rounded-lg border border-white/10 bg-white/[0.02] p-6 transition-all hover:-translate-y-1 hover:border-teal/40 hover:bg-white/[0.04] hover:shadow-[0_0_30px_-10px_rgba(2,238,245,0.35)] sm:p-8">
+          <IconBadge icon="clients" />
+          <h3 class="mt-5 text-xl">Client Relationships</h3>
+          <p class="mt-3 text-sm leading-relaxed text-white/65">Processes organizations use to acquire, manage, and retain clients well.</p>
         </div>
 
-        <div class="rounded border border-white/10 p-6 sm:p-8">
-          <h3 class="text-xl">
-            Partnerships and Sponsorships
-          </h3>
-
-          <p class="mt-3 text-sm leading-relaxed text-white/65">
-            Systems that support developing and sustaining long-term partner and sponsor relationships.
-          </p>
+        <div class="group rounded-lg border border-white/10 bg-white/[0.02] p-6 transition-all hover:-translate-y-1 hover:border-teal/40 hover:bg-white/[0.04] hover:shadow-[0_0_30px_-10px_rgba(2,238,245,0.35)] sm:p-8">
+          <IconBadge icon="partnerships" />
+          <h3 class="mt-5 text-xl">Partnerships and Sponsorships</h3>
+          <p class="mt-3 text-sm leading-relaxed text-white/65">Systems that support developing and sustaining long-term partner and sponsor relationships.</p>
         </div>
 
-        <div class="rounded border border-white/10 p-6 sm:p-8">
-          <h3 class="text-xl">
-            Events and Communities
-          </h3>
-
-          <p class="mt-3 text-sm leading-relaxed text-white/65">
-            Processes that turn events and one-off interactions into engagement and relationships that continue.
-          </p>
+        <div class="group rounded-lg border border-white/10 bg-white/[0.02] p-6 transition-all hover:-translate-y-1 hover:border-teal/40 hover:bg-white/[0.04] hover:shadow-[0_0_30px_-10px_rgba(2,238,245,0.35)] sm:p-8">
+          <IconBadge icon="events" />
+          <h3 class="mt-5 text-xl">Events and Communities</h3>
+          <p class="mt-3 text-sm leading-relaxed text-white/65">Processes that turn events and one-off interactions into engagement and relationships that continue.</p>
         </div>
 
-        <div class="rounded border border-white/10 p-6 sm:p-8">
-          <h3 class="text-xl">
-            Research and Data
-          </h3>
-
-          <p class="mt-3 text-sm leading-relaxed text-white/65">
-            Information and analysis behind understanding markets, stakeholders, and networks, and making better relationship decisions.
-          </p>
+        <div class="group rounded-lg border border-white/10 bg-white/[0.02] p-6 transition-all hover:-translate-y-1 hover:border-teal/40 hover:bg-white/[0.04] hover:shadow-[0_0_30px_-10px_rgba(2,238,245,0.35)] sm:p-8">
+          <IconBadge icon="research" />
+          <h3 class="mt-5 text-xl">Research and Data</h3>
+          <p class="mt-3 text-sm leading-relaxed text-white/65">Information and analysis behind understanding markets, stakeholders, and networks, and making better relationship decisions.</p>
         </div>
 
       </div>
 
-      <a
-        href="/contact"
-        class="mt-8 inline-flex items-center gap-1.5 text-sm font-medium text-teal"
-      >
-        Want to work with us? Contact Us →
-      </a>
+      <a href="/contact" class="mt-8 inline-flex items-center gap-1.5 text-sm font-medium text-teal">Want to work with us? Contact Us →</a>
 
     </div>
   </section>
 
   <!-- Insights -->
   <section class="mx-auto max-w-content px-6 py-20 md:px-10 md:py-24">
-
-    <h2 class="text-2xl sm:text-3xl">
-      Insights
-    </h2>
-
-    <p class="mt-4 max-w-2xl text-white/65">
-      Relaflow publishes practical guides and research on the systems and processes behind managing clients, partners, sponsors, and communities.
-    </p>
-
-    <a
-      href="/insights"
-      class="mt-6 inline-flex items-center gap-1.5 text-sm font-medium text-teal"
-    >
-      Explore Insights →
-    </a>
-
+    <h2 class="text-2xl sm:text-3xl">Insights</h2>
+    <p class="mt-4 max-w-2xl text-white/65">Relaflow publishes practical guides and research on the systems and processes behind managing clients, partners, sponsors, and communities.</p>
+    <a href="/insights" class="mt-6 inline-flex items-center gap-1.5 text-sm font-medium text-teal">Explore Insights →</a>
   </section>
 
   <!-- Resources -->
   <section class="border-t border-white/10 bg-white/[0.02]">
     <div class="mx-auto max-w-content px-6 py-20 md:px-10 md:py-24">
-
-      <h2 class="text-2xl sm:text-3xl">
-        Resources
-      </h2>
-
-      <p class="mt-4 max-w-2xl text-white/65">
-        Guides, templates, and frameworks organizations use to build clear, repeatable relationship-management processes.
-      </p>
-
-      <a
-        href="/resources"
-        class="mt-6 inline-flex items-center gap-1.5 text-sm font-medium text-teal"
-      >
-        Explore Resources →
-      </a>
-
+      <h2 class="text-2xl sm:text-3xl">Resources</h2>
+      <p class="mt-4 max-w-2xl text-white/65">Guides, templates, and frameworks organizations use to build clear, repeatable relationship-management processes.</p>
+      <a href="/resources" class="mt-6 inline-flex items-center gap-1.5 text-sm font-medium text-teal">Explore Resources →</a>
     </div>
   </section>
 
   <!-- Newsletter -->
-  <section
-    id="newsletter"
-    class="mx-auto max-w-content px-6 py-20 md:px-10 md:py-24"
-  >
+  <section id="newsletter" class="mx-auto max-w-content px-6 py-20 md:px-10 md:py-24">
     <Newsletter />
   </section>
 
   <!-- Closing CTA -->
   <section class="border-t border-white/10">
     <div class="mx-auto flex max-w-content flex-col items-start justify-between gap-6 px-6 py-16 md:flex-row md:items-center md:px-10 md:py-20">
-
-      <h2 class="max-w-lg text-2xl sm:text-3xl">
-        Want to build stronger relationship systems?
-      </h2>
-
-      <a
-        href="/contact"
-        class="shrink-0 rounded bg-teal px-6 py-3 text-sm font-medium text-navy transition-colors hover:bg-teal-deep hover:text-white"
-      >
-        Contact Us
-      </a>
-
+      <h2 class="max-w-lg text-2xl sm:text-3xl">Want to build stronger relationship systems?</h2>
+      <a href="/contact" class="shrink-0 rounded bg-teal px-6 py-3 text-sm font-medium text-navy transition-colors hover:bg-teal-deep hover:text-white">Contact Us</a>
     </div>
   </section>
 </Layout>
