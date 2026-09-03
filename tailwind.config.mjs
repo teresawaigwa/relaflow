@@ -10,6 +10,8 @@ export default {
         teal: '#02EEF5',      // FLOW / wave / links / buttons / accents
         'teal-deep': '#02C8CE', // Secondary accent
         grey: '#A4A9AE',      // Tagline / secondary text
+        cream: '#F7F5F1',     // New — light section background, used with real photos
+        ink: '#1A1F26',       // New — dark text for use on cream/light backgrounds
       },
       fontFamily: {
         display: ['"Inter"', 'ui-sans-serif', 'system-ui', 'sans-serif'],
